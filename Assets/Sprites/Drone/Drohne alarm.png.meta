@@ -1,28 +1,10 @@
 fileFormatVersion: 2
-guid: 5f3d967019f79f34e90b85bf99dd7c2b
+guid: 18ea181286c650f4cb187d7d2474843b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6663939740220737121
-    second: Pillar animated Spritesheet_0
-  - first:
-      213: 5101363269955171433
-    second: Pillar animated Spritesheet_1
-  - first:
-      213: 5789078800072846009
-    second: Pillar animated Spritesheet_2
-  - first:
-      213: 5903654064514435537
-    second: Pillar animated Spritesheet_3
-  - first:
-      213: -6869971680247302590
-    second: Pillar animated Spritesheet_4
-  - first:
-      213: 7067783778493354685
-    second: Pillar animated Spritesheet_5
-  - first:
-      213: -6025892863248917819
-    second: Pillar animated Spritesheet_6
+      213: -7598297253137488946
+    second: Drohne alarm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,111 +113,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pillar animated Spritesheet_0
+      name: Drohne alarm_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 166477cf2e11b7c50800000000000000
-      internalID: 6663939740220737121
+      spriteID: 3fe28a65b3bf2d644ac2e6b004a9c9e9
+      internalID: -1356396488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pillar animated Spritesheet_1
+      name: Drohne alarm_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96437e7addeabc640800000000000000
-      internalID: 5101363269955171433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pillar animated Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ba261f2f70f65050800000000000000
-      internalID: 5789078800072846009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pillar animated Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d98c20c71efde150800000000000000
-      internalID: 5903654064514435537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pillar animated Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 246bdddc725f8a0a0800000000000000
-      internalID: -6869971680247302590
+      spriteID: 32a2b9ef6a871b147b5120e8c37ff7a0
+      internalID: -1586686034
       vertices: []
       indices: 
       edges: []
@@ -244,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7f7cf4d43953dae4b9f83b5b2c98e34e
+    spriteID: efa31cd35de45d44a87315eb2b7a64f0
     internalID: 0
     vertices: []
     indices: 
@@ -254,13 +170,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Pillar animated Spritesheet_0: 6663939740220737121
-      Pillar animated Spritesheet_1: 5101363269955171433
-      Pillar animated Spritesheet_2: 5789078800072846009
-      Pillar animated Spritesheet_3: 5903654064514435537
-      Pillar animated Spritesheet_4: -6869971680247302590
+      Drohne alarm_0: -1356396488
+      Drohne alarm_1: -1586686034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
