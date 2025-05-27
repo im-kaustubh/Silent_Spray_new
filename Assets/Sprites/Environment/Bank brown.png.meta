@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bank brown_0: -2143956748839619354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

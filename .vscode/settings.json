@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Silent_Spray.sln"
+    "dotnet.defaultSolution": "Silent_Spray_new.sln"
 }
