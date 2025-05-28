@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      drohne visier_0: -2697841906688740114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
