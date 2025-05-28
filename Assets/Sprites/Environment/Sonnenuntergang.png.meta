@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 20a29e30bf7721d469e8faacdb06d6a5
+guid: dedc7568f736c974ab06fbca27979cfa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 492804002891394988
-    second: Character Walking Day_0
-  - first:
-      213: 2377664193234901292
-    second: Character Walking Day_1
-  - first:
-      213: 7906547525624764998
-    second: Character Walking Day_2
-  - first:
-      213: 76810355233487869
-    second: Character Walking Day_3
-  - first:
-      213: -1263253486569414502
-    second: Character Walking Day_4
-  - first:
-      213: 3388362042308778303
-    second: Character Walking Day_5
+      213: -5371848570111899795
+    second: Sonnenuntergang_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -128,133 +113,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character Walking Day_0
+      name: Sonnenuntergang_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 512
+        width: 1120
+        height: 1008
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: caf6b3031aac6d600800000000000000
-      internalID: 492804002891394988
+      spriteID: c7e74dfbd059e39449f0f731aefd45b6
+      internalID: -203279889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character Walking Day_1
+      name: Sonnenuntergang_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 1120
         y: 0
-        width: 256
-        height: 512
+        width: 1120
+        height: 1008
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c299ee08cf82ff020800000000000000
-      internalID: 2377664193234901292
+      spriteID: 8602102ae1b4e6546a849f91e7748bb7
+      internalID: -1678228250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character Walking Day_2
+      name: Sonnenuntergang_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 2240
         y: 0
-        width: 256
-        height: 512
+        width: 1120
+        height: 1008
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 64a9b987513b9bd60800000000000000
-      internalID: 7906547525624764998
+      spriteID: 40f1fca3b9b0dbd4d97f31fd2d975a50
+      internalID: -666810828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character Walking Day_3
+      name: Sonnenuntergang_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 3360
         y: 0
-        width: 256
-        height: 512
+        width: 1120
+        height: 1008
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dfb73c27c92e01100800000000000000
-      internalID: 76810355233487869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character Walking Day_4
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 256
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a90a1cf95a5087ee0800000000000000
-      internalID: -1263253486569414502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character Walking Day_5
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 256
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f395b3e3351e50f20800000000000000
-      internalID: 3388362042308778303
+      spriteID: e6a3688e4d326ad45b60b2ba84a2c586
+      internalID: -1623904277
       vertices: []
       indices: 
       edges: []
@@ -263,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cbf4550fcb178334a88b7f5751313d02
+    spriteID: 7ddc791af19448040b65f091817f1f81
     internalID: 0
     vertices: []
     indices: 
@@ -273,14 +214,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":1120.0,"y":1008.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Character Walking Day_0: 492804002891394988
-      Character Walking Day_1: 2377664193234901292
-      Character Walking Day_2: 7906547525624764998
-      Character Walking Day_3: 76810355233487869
-      Character Walking Day_4: -1263253486569414502
-      Character Walking Day_5: 3388362042308778303
+      Sonnenuntergang_0: -203279889
+      Sonnenuntergang_1: -1678228250
+      Sonnenuntergang_2: -666810828
+      Sonnenuntergang_3: -1623904277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
