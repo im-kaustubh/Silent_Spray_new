@@ -29,8 +29,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Normal horizontal movement
             movement.x = Input.GetAxisRaw("Horizontal");
-            Debug.Log("movement.x: " + movement.x);
-
+            //Debug.Log("movement.x: " + movement.x);
 
             // Flip sprite depending on direction
             if (movement.x != 0)

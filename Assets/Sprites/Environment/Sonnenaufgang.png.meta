@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sonnenaufgang_0: -3560609361489947678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

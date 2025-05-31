@@ -2854,7 +2854,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -7339149984724004702, guid: a65d8e8150f7c9b47b8cfe920eb0f2c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2874,8 +2874,8 @@ Transform:
   m_GameObject: {fileID: 1376854760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.47, y: -2.82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.7436, y: -2.5313, z: 0}
+  m_LocalScale: {x: 1.1622, y: 1.0873, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2918,13 +2918,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.77, y: 2.26}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
 --- !u!1 &1434153593
 GameObject:
@@ -3146,8 +3146,8 @@ Transform:
   m_GameObject: {fileID: 1460480203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.15, y: -1.99, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalPosition: {x: -4.25, y: -2.24, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2043257973}
@@ -3261,9 +3261,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1526574866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9792ef7f522a5374592445df7461ad39, type: 3}
+  m_Script: {fileID: 11500000, guid: 07809b1e234236d428ab0041bdfdb6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprayProgress: {fileID: 464653961}
+  gameOverManager: {fileID: 1434153594}
+  droneStateSwitcher: {fileID: 713307508}
 --- !u!60 &1526574868
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3740,9 +3743,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1744892626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9792ef7f522a5374592445df7461ad39, type: 3}
+  m_Script: {fileID: 11500000, guid: 07809b1e234236d428ab0041bdfdb6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprayProgress: {fileID: 464653961}
+  gameOverManager: {fileID: 1434153594}
+  droneStateSwitcher: {fileID: 713307508}
 --- !u!60 &1744892628
 PolygonCollider2D:
   m_ObjectHideFlags: 0

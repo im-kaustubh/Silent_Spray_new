@@ -31,7 +31,9 @@ public class PillarInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNear = false;
-            instructionText.SetActive(false);
+
+            if (instructionText != null)
+                instructionText.SetActive(false);
         }
     }
 }
