@@ -8,11 +8,11 @@ public class DroneDetector : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("🛰 Trigger Stay Entered with: " + other.name);  // Log when anything enters
+        // Debug.Log("🛰 Trigger Stay Entered with: " + other.name);  // Log when anything enters
 
         if (other.CompareTag("Drone"))
         {
-            Debug.Log("✅ Drone tag confirmed");
+            // Debug.Log("✅ Drone tag confirmed");
 
             PlayerHide playerHide = GetComponent<PlayerHide>();
 
@@ -42,12 +42,13 @@ public class DroneDetector : MonoBehaviour
             }
             else
             {
-                Debug.Log("🔕 Player is not spraying right now");
+                // Debug.Log("🔕 Player is not spraying right now");
             }
         }
         else
         {
-            Debug.Log("⛔ Detected object is NOT a Drone");
+            //Debug.Log("⛔ Detected object is NOT a Drone");
         }
     }
+
 }
