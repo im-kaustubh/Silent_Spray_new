@@ -7,10 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private Animator animator;
 
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -37,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 scale = transform.localScale;
                 scale.x = Mathf.Abs(scale.x) * (movement.x > 0 ? 1 : -1);
                 transform.localScale = scale;
+
             }
         }
 
@@ -44,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isWalking", movement.x != 0);
 
     }
+
 
     void FixedUpdate()
     {
