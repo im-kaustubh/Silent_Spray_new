@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 4d527c11da159fa43b126f7166595b11
+guid: faaa761abd3df70488dcf2f89070b912
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 40980896877227156
-    second: Environsment WallScene_0
+      213: -7082471113866886767
+    second: Graveyard Tilesheet_0
   - first:
-      213: 7843203585251864008
-    second: Environsment WallScene_1
+      213: -4603297467961995309
+    second: Graveyard Tilesheet_1
+  - first:
+      213: 6135555884531760970
+    second: Graveyard Tilesheet_2
+  - first:
+      213: 4862147364678057305
+    second: Graveyard Tilesheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,45 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environsment WallScene_0
+      name: Graveyard Tilesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 960
-        width: 1280
-        height: 800
+        y: 1759
+        width: 1601
+        height: 742
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49ca1f898e7919000800000000000000
-      internalID: 40980896877227156
+      spriteID: 191cff5eb0206bd90800000000000000
+      internalID: -7082471113866886767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environsment WallScene_1
+      name: Graveyard Tilesheet_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1280
-        height: 941
+        x: 1759
+        y: 1759
+        width: 802
+        height: 732
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cde1001b18a8dc60800000000000000
-      internalID: 7843203585251864008
+      spriteID: 3df8baa975dcd10c0800000000000000
+      internalID: -4603297467961995309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graveyard Tilesheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 799
+        width: 1601
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fb215c19fd52550800000000000000
+      internalID: 6135555884531760970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Graveyard Tilesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1601
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95dbc357441d97340800000000000000
+      internalID: 4862147364678057305
       vertices: []
       indices: 
       edges: []
@@ -164,7 +214,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -173,8 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Environsment WallScene_0: 40980896877227156
-      Environsment WallScene_1: 7843203585251864008
+      Graveyard Tilesheet_0: -7082471113866886767
+      Graveyard Tilesheet_1: -4603297467961995309
+      Graveyard Tilesheet_2: 6135555884531760970
+      Graveyard Tilesheet_3: 4862147364678057305
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

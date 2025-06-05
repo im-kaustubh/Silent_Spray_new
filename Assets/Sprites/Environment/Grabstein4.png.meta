@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 4d527c11da159fa43b126f7166595b11
+guid: d50042195dcc5cc4b92f8dbadec1975f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 40980896877227156
-    second: Environsment WallScene_0
-  - first:
-      213: 7843203585251864008
-    second: Environsment WallScene_1
+      213: -395843696767654524
+    second: Grabstein4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -78,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environsment WallScene_0
+      name: Grabstein4_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 960
-        width: 1280
-        height: 800
+        x: 360
+        y: 81
+        width: 720
+        height: 1206
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49ca1f898e7919000800000000000000
-      internalID: 40980896877227156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Environsment WallScene_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1280
-        height: 941
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8cde1001b18a8dc60800000000000000
-      internalID: 7843203585251864008
+      spriteID: 485269b414ea18af0800000000000000
+      internalID: -395843696767654524
       vertices: []
       indices: 
       edges: []
@@ -163,8 +138,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: c8a5e1299f6ac304e9586c89f1476f06
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Environsment WallScene_0: 40980896877227156
-      Environsment WallScene_1: 7843203585251864008
+      Grabstein4_0: -395843696767654524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
