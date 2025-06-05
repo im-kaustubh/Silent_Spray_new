@@ -24,7 +24,7 @@ public class PlayerHide : MonoBehaviour
     void Update()
     {
         // Press E to hide
-        if (canHide && !isHiding && Input.GetKeyDown(KeyCode.E))
+        if (canHide && !isHiding && Input.GetKeyDown(KeyCode.H))
         {
             isHiding = true;
             spriteRenderer.color = new Color(1f, 1f, 1f, 0.5f); // semi-transparent
