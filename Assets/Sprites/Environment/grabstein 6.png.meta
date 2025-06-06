@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grabstein 6_0: 6586334834761097390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
