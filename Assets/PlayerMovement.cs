@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Check if spraying
         bool isSpraying = Input.GetKey(KeyCode.E);
-        animator.SetBool("isSpraying", isSpraying);
+        //animator.SetBool("isSpraying", isSpraying);
 
         // If spraying, disable movement
         if (isSpraying)
