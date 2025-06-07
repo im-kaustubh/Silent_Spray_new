@@ -18,20 +18,23 @@ public class PlayerHide : MonoBehaviour
         {
             promptFader = hidePrompt.GetComponent<HidePromptFader>();
             promptFader.Hide(); // start invisible
+            hidePrompt.SetActive(true);
         }
     }
 
     void Update()
     {
-        // Press E to hide
+        // Press H to hide
         if (canHide && !isHiding && Input.GetKeyDown(KeyCode.H))
         {
+            
             isHiding = true;
             spriteRenderer.color = new Color(1f, 1f, 1f, 0.5f); // semi-transparent
             Debug.Log("🔒 Player is hiding");
 
             if (promptFader != null)
                 promptFader.Hide(); // hide prompt
+
         }
 
         // If hiding and player moves, unhide
