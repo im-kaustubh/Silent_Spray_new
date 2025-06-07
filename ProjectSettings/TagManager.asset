@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: NewsPaper Background
+    uniqueID: 460256111
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -54,6 +57,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 2307971691
+    locked: 0
+  - name: Hiding Spots
+    uniqueID: 1096807675
     locked: 0
   - name: UI
     uniqueID: 1168319279
