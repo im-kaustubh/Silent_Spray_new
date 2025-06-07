@@ -34972,6 +34972,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hidePrompt: {fileID: 1601212519}
+  normalSprite: {fileID: -681164731451919846, guid: e2b731da8aeed5d45aff3bc1d133c82e, type: 3}
+  hidingSprite: {fileID: 21300000, guid: fe72aadd1263ac94e9af6c7669ea081a, type: 3}
   isHiding: 0
 --- !u!95 &1460480213
 Animator:
