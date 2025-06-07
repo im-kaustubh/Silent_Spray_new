@@ -354,8 +354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1148.4, y: -269}
-  m_SizeDelta: {x: 255.2, y: 538}
+  m_AnchoredPosition: {x: 845.10004, y: -243.5}
+  m_SizeDelta: {x: 187.8, y: 487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106663304
 MonoBehaviour:
@@ -711,8 +711,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 382.8, y: -269}
-  m_SizeDelta: {x: 255.2, y: 538}
+  m_AnchoredPosition: {x: 281.7, y: -243.5}
+  m_SizeDelta: {x: 187.8, y: 487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241240249
 MonoBehaviour:
@@ -1289,8 +1289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 638, y: -269}
-  m_SizeDelta: {x: 255.2, y: 538}
+  m_AnchoredPosition: {x: 469.5, y: -243.5}
+  m_SizeDelta: {x: 187.8, y: 487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409140211
 MonoBehaviour:
@@ -14611,8 +14611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 893.19995, y: -269}
-  m_SizeDelta: {x: 255.2, y: 538}
+  m_AnchoredPosition: {x: 657.30005, y: -243.5}
+  m_SizeDelta: {x: 187.8, y: 487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619540751
 MonoBehaviour:
@@ -31426,8 +31426,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 127.6, y: -269}
-  m_SizeDelta: {x: 255.2, y: 538}
+  m_AnchoredPosition: {x: 93.9, y: -243.5}
+  m_SizeDelta: {x: 187.8, y: 487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &950641586
 MonoBehaviour:
@@ -33978,7 +33978,7 @@ SpriteRenderer:
   m_Size: {x: 50, y: 17.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1764774208
