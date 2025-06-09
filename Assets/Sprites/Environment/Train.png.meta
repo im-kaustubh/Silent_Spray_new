@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b3a74b6b88583046a85cf3bdba6c4b2
+guid: 9364ab18b50dd5048bff8a13148becf7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3780516893433214751
-    second: mapIcon_0
+      213: -4368322862165430076
+    second: Train_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mapIcon_0
+      name: Train_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 37
-        width: 122
-        height: 80
+        x: 31
+        y: 0
+        width: 770
+        height: 433
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e8cc8b5ae7e88bc0800000000000000
-      internalID: -3780516893433214751
+      spriteID: 4c0796050899063c0800000000000000
+      internalID: -4368322862165430076
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      mapIcon_0: -3780516893433214751
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
