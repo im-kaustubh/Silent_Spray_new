@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -21,5 +21,31 @@ public class JobInfoPanelManager : MonoBehaviour
     {
         // TODO: Add logic here to load mission scene or flag mission start
         Debug.Log("Mission Accepted!");
+    }
+}*/
+
+using UnityEngine;
+using TMPro;
+
+public class JobInfoPanelManager : MonoBehaviour
+{
+    public GameObject jobInfoPanel;
+    public TMP_Text riddleText;
+
+    public void ShowInfo(string message)
+    {
+        riddleText.text = message;
+        jobInfoPanel.SetActive(true);
+    }
+
+    public void HideInfoPanel()
+    {
+        jobInfoPanel.SetActive(false);
+    }
+
+    public void AcceptMission()
+    {
+        Debug.Log("Mission Accepted!");
+        // Add mission logic here
     }
 }
