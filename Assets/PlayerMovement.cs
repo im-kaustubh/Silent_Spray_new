@@ -54,11 +54,11 @@ public class PlayerMovement : MonoBehaviour
 {
     if (movement.x == 0)
     {
-        rb.velocity = new Vector2(0f, rb.velocity.y);
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
     }
     else
     {
-        rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 }
 }

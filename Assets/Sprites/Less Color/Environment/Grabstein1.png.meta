@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-
-guid: 0022b46b6b647034eaf772622949ca8a
-guid: b1dd6915996320940b0a4af981deac18
-41a2709dc6f9ddfdb0a649fc9a7900f4b356f04c
+guid: 7d5679d8d3eeaca4784492e38d57497c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -608701613117460382
-    second: "Mu\u0308lleimer_0"
+      213: 5191328999341051110
+    second: Grabstein1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Mu\u0308lleimer_0"
+      name: Grabstein1_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 3
-        width: 90
-        height: 122
+        x: 13
+        y: 7
+        width: 102
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2603def9b157d87f0800000000000000
-      internalID: -608701613117460382
+      spriteID: 6ec48e5583e4b0840800000000000000
+      internalID: 5191328999341051110
       vertices: []
       indices: 
       edges: []
@@ -150,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "Mu\u0308lleimer_0": -608701613117460382
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
