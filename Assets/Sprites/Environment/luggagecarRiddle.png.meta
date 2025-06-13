@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      luggagecarRiddle_0: 8866703672839812961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
