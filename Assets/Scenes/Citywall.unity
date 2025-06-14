@@ -34367,6 +34367,18 @@ MonoBehaviour:
   graffitiSelector: {fileID: 877481829}
   sprayProgress: {fileID: 464653961}
   sprayPoint: {fileID: 2043257973}
+  animatedGraffitiPrefabs:
+  - {fileID: 7703533485683761057, guid: 372229cac243a914c96bc9867e64e442, type: 3}
+  - {fileID: 8008082847798043353, guid: 7e143e3470ed8d346aa2d246a544ff91, type: 3}
+  - {fileID: 1114892647072055635, guid: 20a99e36fbc310f498c1824a6315a114, type: 3}
+  - {fileID: 6173119055820431834, guid: 0f4e86b9a23ba2e4fa541cd14dcff04d, type: 3}
+  - {fileID: 3520492768244118169, guid: 39968f2434c76ef4bb68e9f085642e4e, type: 3}
+  staticGraffitiPrefabs:
+  - {fileID: 116369993200442148, guid: 5f51564cda2715649a96ff9a776fc4ef, type: 3}
+  - {fileID: 3654638609068628713, guid: 9d00fe56a68e7b2478dbf34446a080fc, type: 3}
+  - {fileID: 6171620429302312404, guid: d03258194b8ddb2418a61b5767193c38, type: 3}
+  - {fileID: 1128004785219209163, guid: 0a6764eaf2d86ef4d991e66061b3a185, type: 3}
+  - {fileID: 3523519466412139479, guid: dfabd2409e58eec41a67b3f52b4aa3d8, type: 3}
 --- !u!1 &1478960267
 GameObject:
   m_ObjectHideFlags: 0

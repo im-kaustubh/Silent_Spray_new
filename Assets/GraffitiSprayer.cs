@@ -6,40 +6,44 @@ public class GraffitiSprayer : MonoBehaviour
     public SprayProgress sprayProgress;
     public Transform sprayPoint;
 
+    public GameObject[] animatedGraffitiPrefabs;
+    public GameObject[] staticGraffitiPrefabs;
+
+    private GameObject currentAnimated;
     private bool hasSprayed = false;
 
     void Update()
     {
-        // If bar is not empty and E is held
+        int selectedIndex = graffitiSelector.GetSelectedIndex();
+
+        // Start spraying with animation
         if (Input.GetKey(KeyCode.E) && sprayProgress.CurrentValue > 0f)
         {
-            hasSprayed = false; // allow spray again once refilled
+            if (currentAnimated == null && !hasSprayed)
+            {
+                currentAnimated = Instantiate(animatedGraffitiPrefabs[selectedIndex], sprayPoint.position, Quaternion.identity);
+            }
         }
 
-        // When bar is fully drained and we haven't sprayed yet
-        if (!hasSprayed && sprayProgress.CurrentValue <= 0f)
+        // Spray complete — switch to static graffiti
+        if (!hasSprayed && sprayProgress.CurrentValue <= 0f && currentAnimated != null)
         {
-            SprayGraffiti();
+            Vector3 pos = currentAnimated.transform.position;
+            Destroy(currentAnimated);
+            Instantiate(staticGraffitiPrefabs[selectedIndex], pos, Quaternion.identity);
+            currentAnimated = null;
             hasSprayed = true;
         }
 
         // Reset spray lockout when player releases E or bar refills
         if (Input.GetKeyUp(KeyCode.E) || sprayProgress.CurrentValue > 0.1f)
         {
+            if (currentAnimated != null)
+            {
+                Destroy(currentAnimated);
+                currentAnimated = null;
+            }
             hasSprayed = false;
-        }
-    }
-
-    void SprayGraffiti()
-    {
-        GameObject prefab = graffitiSelector.GetSelectedGraffiti();
-        if (prefab != null)
-        {
-            Instantiate(prefab, sprayPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogWarning("❌ No graffiti prefab selected.");
         }
     }
 }

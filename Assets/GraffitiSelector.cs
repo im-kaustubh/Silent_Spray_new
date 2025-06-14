@@ -4,14 +4,22 @@ public class GraffitiSelector : MonoBehaviour
 {
     [Header("UI Elements")]
     public GameObject graffitiPanel;
-    public GameObject[] graffitiPrefabs;      // Drag your 5 animated graffiti prefabs here
+    public GameObject[] graffitiPrefabs; // These should be animated graffiti prefabs
 
     private GameObject selectedGraffitiPrefab;
+    private int selectedIndex = 0; // Track which graffiti is selected
 
     void Start()
     {
         if (graffitiPanel != null)
             graffitiPanel.SetActive(false);
+
+        // Default selection to first graffiti
+        if (graffitiPrefabs.Length > 0)
+        {
+            selectedGraffitiPrefab = graffitiPrefabs[0];
+            selectedIndex = 0;
+        }
     }
 
     void Update()
@@ -28,6 +36,7 @@ public class GraffitiSelector : MonoBehaviour
         if (index >= 0 && index < graffitiPrefabs.Length)
         {
             selectedGraffitiPrefab = graffitiPrefabs[index];
+            selectedIndex = index;
 
             if (graffitiPanel != null)
                 graffitiPanel.SetActive(false);
@@ -37,5 +46,10 @@ public class GraffitiSelector : MonoBehaviour
     public GameObject GetSelectedGraffiti()
     {
         return selectedGraffitiPrefab;
+    }
+
+    public int GetSelectedIndex()
+    {
+        return selectedIndex;
     }
 }
