@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 241240251}
   - component: {fileID: 241240250}
   - component: {fileID: 241240249}
+  - component: {fileID: 241240252}
   m_Layer: 5
   m_Name: JobButton_2
   m_TagString: Untagged
@@ -322,28 +323,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1918650072}
-        m_TargetAssemblyTypeName: JobInfoPanelManager, Assembly-CSharp
-        m_MethodName: ShowInfo
-        m_Mode: 5
+      - m_Target: {fileID: 241240252}
+        m_TargetAssemblyTypeName: JobButtonTrigger, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "3 15 12 4 / 19 20 15 14 5 19 / 23 1 20 3 8 / 2 5 14
-            5 1 20 8 / 1 / 16 1 12 5 / 13 15 15 14 /\u200B 19 9 12 5 14 20 / 19 5
-            14 20 9 14 5 12 19 / 9 14 / 18 5 19 20 12 5 19 19 / 7 18 15 21 14 4 /\u200B
-            1 / 18 21 19 20 5 4 / 1 18 3 8 / 2 18 5 1 20 8 5 19 / 15 16 5 14 / 19
-            12 15 23 / 2 5 25 15 14 4 / 1 / 8 15 12 12 15 23 / 23 1 9 20 19 /\u200B
-            14 15 20 / 17 21 9 20 5 / 5 1 18 20 8 / 14 15 20 / 17 21 9 20 5 / 18
-            5 19 20 /\u200B 1 / 23 9 20 8 5 18 5 4 / 2 12 15 15 13 / 15 14 3 5 /
-            18 5 4 /\u200B 3 12 9 14 7 19 / 20 15 / 20 8 5 / 19 15 9 12 /\u200B 23
-            8 5 18 5 / 14 15 / 8 1 14 4 / 4 1 18 5 19 / 12 9 14 7 5 18 /\u200B 20
-            8 5 25 / 2 21 18 9 5 4 / 19 15 13 5 20 8 9 14 7 / 20 8 5 18 5 /\u200B
-            2 5 20 23 5 5 14 / 20 8 5 / 20 8 18 5 19 8 15 12 4 / 1 14 4 / 20 8 5
-            / 2 15 24 /\u200B 2 21 20 / 14 15 20 / 1 12 12 / 15 6 / 9 20 / 19 20
-            1 25 5 4 \\n \\n Sometimes numbers say more than letters\u200B"
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &241240250
@@ -384,6 +373,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241240247}
   m_CullTransparentMesh: 1
+--- !u!114 &241240252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241240247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ebd2c11c0b1c248b0603796b332d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riddleText: "3 15 12 4 / 19 20 15 14 5 19 / 23 1 20 3 8 / 2 5 14 5 1 20 8 / 1 /
+    16 1 12 5 / 13 15 15 14 /\u200B 19 9 12 5 14 20 / 19 5 14 20 9 14 5 12 19 / 9
+    14 / 18 5 19 20 12 5 19 19 / 7 18 15 21 14 4 /\u200B 1 / 18 21 19 20 5 4 / 1
+    18 3 8 / 2 18 5 1 20 8 5 19 / 15 16 5 14 / 19 12 15 23 / 2 5 25 15 14 4 / 1 /
+    8 15 12 12 15 23 / 23 1 9 20 19 /\u200B 14 15 20 / 17 21 9 20 5 / 5 1 18 20 8
+    / 14 15 20 / 17 21 9 20 5 / 18 5 19 20 /\u200B 1 / 23 9 20 8 5 18 5 4 / 2 12
+    15 15 13 / 15 14 3 5 / 18 5 4 /\u200B 3 12 9 14 7 19 / 20 15 / 20 8 5 / 19 15
+    9 12 /\u200B 23 8 5 18 5 / 14 15 / 8 1 14 4 / 4 1 18 5 19 / 12 9 14 7 5 18 /\u200B
+    20 8 5 25 / 2 21 18 9 5 4 / 19 15 13 5 20 8 9 14 7 / 20 8 5 18 5 /\u200B 2 5
+    20 23 5 5 14 / 20 8 5 / 20 8 18 5 19 8 15 12 4 / 1 14 4 / 20 8 5 / 2 15 24 /\u200B
+    2 21 20 / 14 15 20 / 1 12 12 / 15 6 / 9 20 / 19 20 1 25 5 4 \\n \\n Sometimes
+    numbers say more than letters\u200B"
+  sceneName: Cemetery
+  jobInfoPanelManager: {fileID: 1918650072}
 --- !u!1 &312611249
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +625,7 @@ GameObject:
   - component: {fileID: 409140213}
   - component: {fileID: 409140212}
   - component: {fileID: 409140211}
+  - component: {fileID: 409140214}
   m_Layer: 5
   m_Name: JobButton_3
   m_TagString: Untagged
@@ -681,23 +697,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1918650072}
-        m_TargetAssemblyTypeName: JobInfoPanelManager, Assembly-CSharp
-        m_MethodName: ShowInfo
-        m_Mode: 5
+      - m_Target: {fileID: 409140214}
+        m_TargetAssemblyTypeName: JobButtonTrigger, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Dsvm wfhp dzikh gsv hvz rm hgroovvh,\u200B tl dsviv
-            gsv hzo gvoovh zmw ilkvh dsrksvi orpv lwy gfl gmfvtvh.\u200B Gsviv blf\u2019o
-            urmw z evhhov zkitg uli nsv ivhg,\u200B rgh uli mgskv wrglm hlnvgrmtz
-            zolfhg snfnm,\u200B szri ulldrt yzxv, vbvh urcwv lm gsv wvvc yvold.\u200B
-            \\n  Zylyv rgv svon, z hroiev xfiiv ivhgh,\u200B xizwovw yb uzrmg hzkilg
-            gszg wl mlg urxpvi.\u200B Gsvb dzxsg, hrovmg zmw hvwzdb.\u200B \\n\\n 
-            If you wish to see truly, gaze into the mirror and let the world reflect
-            the other way."
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &409140212
@@ -738,6 +747,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409140209}
   m_CullTransparentMesh: 1
+--- !u!114 &409140214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409140209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ebd2c11c0b1c248b0603796b332d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riddleText: "Dsvm wfhp dzikh gsv hvz rm hgroovvh,\u200B tl dsviv gsv hzo gvoovh
+    zmw ilkvh dsrksvi orpv lwy gfl gmfvtvh.\u200B Gsviv blf\u2019o urmw z evhhov
+    zkitg uli nsv ivhg,\u200B rgh uli mgskv wrglm hlnvgrmtz zolfhg snfnm,\u200B szri
+    ulldrt yzxv, vbvh urcwv lm gsv wvvc yvold.\u200B \\n  Zylyv rgv svon, z hroiev
+    xfiiv ivhgh,\u200B xizwovw yb uzrmg hzkilg gszg wl mlg urxpvi.\u200B Gsvb dzxsg,
+    hrovmg zmw hvwzdb.\u200B \\n\\n  If you wish to see truly, gaze into the mirror
+    and let the world reflect the other way."
+  sceneName: Harbor
+  jobInfoPanelManager: {fileID: 1918650072}
 --- !u!1 &427491251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1230,7 @@ GameObject:
   - component: {fileID: 619540753}
   - component: {fileID: 619540752}
   - component: {fileID: 619540751}
+  - component: {fileID: 619540754}
   m_Layer: 5
   m_Name: JobButton_4
   m_TagString: Untagged
@@ -1271,23 +1302,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1918650072}
-        m_TargetAssemblyTypeName: JobInfoPanelManager, Assembly-CSharp
-        m_MethodName: ShowInfo
-        m_Mode: 5
+      - m_Target: {fileID: 619540754}
+        m_TargetAssemblyTypeName: JobButtonTrigger, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Nbwkv cjhe pwbem dxrx lh fvdbmcggrhv yfillkyhl vwzh
-            ki lav vwtk ix irml cfojgvsk,\u200B  Myy geu cjhe bwtin jxjnk uvnoxvh
-            lbdy sgu vmkuyf.                                                                                 
-            \u200B  T xurx kbsm eynxi mdxvjk lzfwgkfq zlujwj nzx suyzraw hw jslk
-            mztuiol.\u200B  Fhdr kbglv qzh iyuhxhasv nzx sfswv cf yccyak qaec jsben
-            lav jsmy,qzxiy jnjn sgu nafv ealj.\u200B  \u200B \\n\\n   The letters
-            are shifting in my head\u2026\u200B\\n   Rust. A key. A French idea.
-            That's all that comes back.\u200B"
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &619540752
@@ -1328,6 +1352,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619540749}
   m_CullTransparentMesh: 1
+--- !u!114 &619540754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619540749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ebd2c11c0b1c248b0603796b332d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riddleText: "Nbwkv cjhe pwbem dxrx lh fvdbmcggrhv yfillkyhl vwzh ki lav vwtk ix
+    irml cfojgvsk,\u200B  Myy geu cjhe bwtin jxjnk uvnoxvh lbdy sgu vmkuyf.                                                                                 
+    \u200B  T xurx kbsm eynxi mdxvjk lzfwgkfq zlujwj nzx suyzraw hw jslk mztuiol.\u200B 
+    Fhdr kbglv qzh iyuhxhasv nzx sfswv cf yccyak qaec jsben lav jsmy,qzxiy jnjn sgu
+    nafv ealj.\u200B  \u200B \\n\\n   The letters are shifting in my head\u2026\u200B\\n  
+    Rust. A key. A French idea. That's all that comes back.\u200B"
+  sceneName: Train Station
+  jobInfoPanelManager: {fileID: 1918650072}
 --- !u!1 &659034667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2156,6 +2200,7 @@ GameObject:
   - component: {fileID: 950641588}
   - component: {fileID: 950641587}
   - component: {fileID: 950641586}
+  - component: {fileID: 950641589}
   m_Layer: 5
   m_Name: JobButton_1
   m_TagString: Untagged
@@ -2227,21 +2272,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1918650072}
-        m_TargetAssemblyTypeName: JobInfoPanelManager, Assembly-CSharp
-        m_MethodName: ShowInfo
-        m_Mode: 5
+      - m_Target: {fileID: 950641589}
+        m_TargetAssemblyTypeName: JobButtonTrigger, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Fixaiir xli vih xlex wmxw mr wmpirgi erh xli mvsr xlex
-            jpmgoivw fc rmklx, xlivi'w e aepp xlex'w jsvksxxir lsa xs wtieo. Mx riihw
-            e ria jegi. Rsx e aspj, rsx e fmvh \u2014 e wirxmrip amxl fyxxsr iciw
-            erh e lievx sj gsxxsr. Sri als wxecw, izir alir izivcxlmrk ipwi pieziw.
-            Csy orsa xli tpegi.\\n\\nPS. Remember to take 4 steps forward\\n\\nYour
-            old Friend Ceasar\\n"
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &950641587
@@ -2282,6 +2322,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950641584}
   m_CullTransparentMesh: 1
+--- !u!114 &950641589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950641584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ebd2c11c0b1c248b0603796b332d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riddleText: "Fixaiir xli vih xlex wmxw mr wmpirgi erh xli mvsr xlex jpmgoivw fc
+    rmklx, xlivi'w e aepp xlex'w jsvksxxir lsa xs wtieo. Mx riihw e ria jegi. Rsx
+    e aspj, rsx e fmvh \u2014 e wirxmrip amxl fyxxsr iciw erh e lievx sj gsxxsr.
+    Sri als wxecw, izir alir izivcxlmrk ipwi pieziw. Csy orsa xli tpegi.\\n\\nPS.
+    Remember to take 4 steps forward\\n\\nYour old Friend Ceasar\\n"
+  sceneName: Citywall
+  jobInfoPanelManager: {fileID: 1918650072}
 --- !u!1 &1021287258
 GameObject:
   m_ObjectHideFlags: 0

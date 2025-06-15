@@ -26,15 +26,19 @@ public class JobInfoPanelManager : MonoBehaviour
 
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class JobInfoPanelManager : MonoBehaviour
 {
     public GameObject jobInfoPanel;
     public TMP_Text riddleText;
 
-    public void ShowInfo(string message)
+    private string selectedScene;
+
+    public void ShowInfo(string message, string sceneName)
     {
         riddleText.text = message;
+        selectedScene = sceneName;
         jobInfoPanel.SetActive(true);
     }
 
@@ -45,7 +49,8 @@ public class JobInfoPanelManager : MonoBehaviour
 
     public void AcceptMission()
     {
-        Debug.Log("Mission Accepted!");
-        // Add mission logic here
+        Debug.Log("Mission Accepted! Loading: " + selectedScene);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(selectedScene);
     }
 }
