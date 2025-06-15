@@ -3731,7 +3731,7 @@ Transform:
   m_GameObject: {fileID: 1376854760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.31, y: -1.22, z: 0}
+  m_LocalPosition: {x: -31.11, y: -1.08, z: 0}
   m_LocalScale: {x: 1.1622, y: 1.0873, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4090,7 +4090,7 @@ Transform:
   m_GameObject: {fileID: 1460480203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.6, y: -0.98, z: 0}
+  m_LocalPosition: {x: -26.74, y: -0.66, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4139,6 +4139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hidePrompt: {fileID: 1601212519}
+  normalSprite: {fileID: 0}
+  hidingSprite: {fileID: 0}
   isHiding: 0
 --- !u!95 &1460480213
 Animator:
@@ -4177,6 +4179,8 @@ MonoBehaviour:
   graffitiSelector: {fileID: 877481829}
   sprayProgress: {fileID: 464653961}
   sprayPoint: {fileID: 2043257973}
+  animatedGraffitiPrefabs: []
+  staticGraffitiPrefabs: []
 --- !u!1 &1523080769
 GameObject:
   m_ObjectHideFlags: 0
