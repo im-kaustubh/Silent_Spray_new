@@ -29,13 +29,26 @@ public class GraffitiSprayer : MonoBehaviour
         if (!hasSprayed && sprayProgress.CurrentValue <= 0f && currentAnimated != null)
         {
             Vector3 pos = currentAnimated.transform.position;
+            string sprayedGraffitiName = staticGraffitiPrefabs[selectedIndex].name + "(Clone)";
+
             Destroy(currentAnimated);
             Instantiate(staticGraffitiPrefabs[selectedIndex], pos, Quaternion.identity);
+
+            // Validate spray
+            
+            var validator = Object.FindFirstObjectByType<SprayValidator>();
+            if (validator != null)
+            {
+                validator.ValidateSpray(sprayedGraffitiName);
+            }
+
+
+
             currentAnimated = null;
             hasSprayed = true;
         }
 
-        // Reset spray lockout when player releases E or bar refills
+        // Reset spray lockout
         if (Input.GetKeyUp(KeyCode.E) || sprayProgress.CurrentValue > 0.1f)
         {
             if (currentAnimated != null)
