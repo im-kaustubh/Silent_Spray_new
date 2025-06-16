@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -22,4 +23,17 @@ public class GameOverManager : MonoBehaviour
         }
     }
 
+    public void Retry()
+    {
+        Debug.Log("🔁 Retry pressed — Reloading scene");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GoToMenu()
+    {
+        Debug.Log("🏠 Menu pressed — Loading 'Newspaper' scene");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("NewspaperArea");
+    }
 }

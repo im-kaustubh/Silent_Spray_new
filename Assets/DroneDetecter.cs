@@ -2,53 +2,29 @@
 
 public class DroneDetector : MonoBehaviour
 {
-    public SprayProgress sprayProgress;
     public GameOverManager gameOverManager;
-    public DroneStateSwitcher droneStateSwitcher;
 
     void OnTriggerStay2D(Collider2D other)
     {
-        // Debug.Log("🛰 Trigger Stay Entered with: " + other.name);  // Log when anything enters
+        if (!other.CompareTag("Player")) return;
 
-        if (other.CompareTag("Drone"))
+        PlayerHide playerHide = other.GetComponent<PlayerHide>();
+
+        if (gameOverManager == null)
         {
-            // Debug.Log("✅ Drone tag confirmed");
-
-            PlayerHide playerHide = GetComponent<PlayerHide>();
-
-            if (sprayProgress == null)
-            {
-                Debug.LogWarning("🚫 sprayProgress is not assigned!");
-                return;
-            }
-
-            if (gameOverManager == null)
-            {
-                Debug.LogWarning("🚫 gameOverManager is not assigned!");
-                return;
-            }
-
-            if (playerHide != null && playerHide.isHiding)
-            {
-                Debug.Log("😎 Player is hiding — safe from drone");
-                return;
-            }
-
-            if (Input.GetKey(KeyCode.E))
-            {
-                Debug.Log("🚨 Drone spotted you spraying! Triggering game over!");
-                droneStateSwitcher.TriggerAlert();
-                gameOverManager.TriggerGameOver();
-            }
-            else
-            {
-                // Debug.Log("🔕 Player is not spraying right now");
-            }
+            Debug.LogWarning("🚫 gameOverManager is not assigned!");
+            return;
         }
-        else
+
+        // If player is hiding, drone ignores
+        if (playerHide != null && playerHide.isHiding)
         {
-            //Debug.Log("⛔ Detected object is NOT a Drone");
+            Debug.Log("😎 Player is hiding — safe from drone");
+            return;
         }
+
+        // Player is in spotlight and not hiding: game over
+        Debug.Log("🚨 Player caught in spotlight! Game Over!");
+        gameOverManager.TriggerGameOver();
     }
-
 }
