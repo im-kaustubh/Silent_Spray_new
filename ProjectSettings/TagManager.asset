@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HidingSpot
   - Drone
+  - Mailbox
   layers:
   - Default
   - TransparentFX
