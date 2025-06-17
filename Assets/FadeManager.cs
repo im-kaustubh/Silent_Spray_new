@@ -40,7 +40,7 @@ public class FadeManager : MonoBehaviour
 
     private IEnumerator FadeAndSwitch(string sceneName)
     {
-        fadeAnimator.SetTrigger("StartFadeOut"); // 🔄 only play when triggered
+        fadeAnimator.SetTrigger("StartFadeOut"); // only play when triggered
         yield return new WaitForSeconds(1f); // wait for fade animation to finish
         SceneManager.LoadScene(sceneName);
     }

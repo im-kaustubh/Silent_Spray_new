@@ -7,7 +7,7 @@ public class GameOverManager : MonoBehaviour
 
     public void TriggerGameOver()
     {
-        Debug.Log("🧨 TriggerGameOver() CALLED");
+        Debug.Log("TriggerGameOver() CALLED");
 
         if (gameOverPanel != null)
         {
@@ -19,20 +19,20 @@ public class GameOverManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("🚫 GameOverPanel reference is missing!");
+            Debug.LogError("GameOverPanel reference is missing!");
         }
     }
 
     public void Retry()
     {
-        Debug.Log("🔁 Retry pressed — Reloading scene");
+        Debug.Log("Retry pressed — Reloading scene");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void GoToMenu()
     {
-        Debug.Log("🏠 Menu pressed — Loading 'Newspaper' scene");
+        Debug.Log("Menu pressed — Loading 'Newspaper' scene");
         Time.timeScale = 1f;
         SceneManager.LoadScene("NewspaperArea");
     }
