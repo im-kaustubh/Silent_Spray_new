@@ -4,7 +4,6 @@ public class DroneDetector : MonoBehaviour
 {
     public SprayProgress sprayProgress;
     public GameOverManager gameOverManager;
-    public DroneStateSwitcher droneStateSwitcher;
 
     void OnTriggerStay2D(Collider2D other)
     {
@@ -37,7 +36,6 @@ public class DroneDetector : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 Debug.Log("🚨 Drone spotted you spraying! Triggering game over!");
-                droneStateSwitcher.TriggerAlert();
                 gameOverManager.TriggerGameOver();
             }
             else
