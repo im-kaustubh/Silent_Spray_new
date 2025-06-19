@@ -6,17 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Citywall.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/StartMenu.unity
+    guid: 83ac8e2956860d449b946d78c9ecff5c
   - enabled: 1
     path: Assets/Scenes/NewspaperArea.unity
     guid: 28085a4ef4ac2504298798c9ec8ff3e4
-  - enabled: 0
-    path: Assets/Scenes/3rd_scene.unity
-    guid: 1b3d247147bff4d0a8508d4d8f57c5b8
-  - enabled: 0
-    path: Assets/Scenes/DayScene.unity
-    guid: 356669cfee7abab4f8a7f457c20a440a
+  - enabled: 1
+    path: Assets/Scenes/Citywall.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Cemetery.unity
     guid: 3a44e84bfb137fe4bbfa046f21641fc2

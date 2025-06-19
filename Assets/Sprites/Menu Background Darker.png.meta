@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 5f32c87dc03f4bf448f036f4fb6f5e1c
+guid: 075157c2f0645d048a0ff4d405518d92
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7927044110524778738
-    second: Logo filled_0
-  - first:
-      213: -7632519798687162419
-    second: Logo filled_1
+      213: -3585171504369822235
+    second: Menu Background Darker_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Logo filled_1
+      name: Menu Background Darker_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 1920
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcf9d129ea7d31690800000000000000
-      internalID: -7632519798687162419
+      spriteID: 5e51f270389ee3ec0800000000000000
+      internalID: -3585171504369822235
       vertices: []
       indices: 
       edges: []
@@ -141,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a78b3e45082656b4bab1f5a4886a0eb9
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -150,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Logo filled_0: -7927044110524778738
-      Logo filled_1: -7632519798687162419
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
