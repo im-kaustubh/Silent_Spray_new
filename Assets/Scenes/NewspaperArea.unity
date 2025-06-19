@@ -4253,7 +4253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61423cb7be40bd042a782868e9074546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapPanel: {fileID: 1137411301}
   jobInfoPanel: {fileID: 905654676}
   riddleText: {fileID: 1225933583}
 --- !u!1 &1931991193
