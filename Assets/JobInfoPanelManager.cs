@@ -1,35 +1,10 @@
-/*using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-
-public class JobInfoPanelManager : MonoBehaviour
-{
-    public GameObject jobInfoPanel;
-    //public TMP_Text infoText;
-
-    public void ShowInfoPanel()
-    {
-        jobInfoPanel.SetActive(true);
-    }
-
-    public void HideInfo()
-    {
-        jobInfoPanel.SetActive(false);
-    }
-
-    public void AcceptMission()
-    {
-        // TODO: Add logic here to load mission scene or flag mission start
-        Debug.Log("Mission Accepted!");
-    }
-}*/
-
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
 public class JobInfoPanelManager : MonoBehaviour
 {
+    public GameObject mapPanel;
     public GameObject jobInfoPanel;
     public TMP_Text riddleText;
 
@@ -49,8 +24,15 @@ public class JobInfoPanelManager : MonoBehaviour
 
     public void AcceptMission()
     {
-        Debug.Log("Mission Accepted! Loading: " + selectedScene);
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(selectedScene);
+        Debug.Log("Mission Accepted! Opening Map.");
+        jobInfoPanel.SetActive(false); // Hide job info panel
+        if (mapPanel != null)
+        {
+            mapPanel.SetActive(true);  // Show map panel
+        }
+        else
+        {
+            Debug.LogWarning("Map Panel reference not set!");
+        }
     }
 }
