@@ -7,6 +7,7 @@ public class MapLocationButton : MonoBehaviour
 
     public void LoadLocation()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneToLoad);
     }
 }

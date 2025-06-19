@@ -4255,6 +4255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jobInfoPanel: {fileID: 905654676}
   riddleText: {fileID: 1225933583}
+  mapPanel: {fileID: 1137411301}
 --- !u!1 &1931991193
 GameObject:
   m_ObjectHideFlags: 0
