@@ -4,10 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class JobInfoPanelManager : MonoBehaviour
 {
-    public GameObject mapPanel;
     public GameObject jobInfoPanel;
     public TMP_Text riddleText;
-
+    public GameObject mapPanel;
     private string selectedScene;
 
     public void ShowInfo(string message, string sceneName)
