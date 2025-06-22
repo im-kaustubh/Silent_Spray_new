@@ -40,5 +40,8 @@ public class PlayerHealth : MonoBehaviour
                 gameOverManager.TriggerGameOver();
             }
         }
+        FindObjectOfType<CameraShake>().Shake();
+
+
     }
 }
