@@ -159,18 +159,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Welcome to Arsentia...
 
-    
 
-    A city where rules are strict, and
-    color is illegal.
+
+    A city where rules are strict, and color
+    is illegal.
 
     Art and Expression are seen as a threat.
 
-    The streets
-    are uniform and grey. The buildings are cold and lifeless.
+    The streets are
+    uniform and grey. The buildings are cold and lifeless.
 
     At night, drones
-    patrol the skies, watching for anything out of the ordinary.
+    patrol the sky, watching for anything out of the ordinary.
 
 '
   m_isRightToLeft: 0
