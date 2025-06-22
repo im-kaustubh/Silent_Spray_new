@@ -2,29 +2,32 @@
 
 public class DroneDetector : MonoBehaviour
 {
-    public GameOverManager gameOverManager;
+    private float hitCooldown = 2f;
+    private float lastHitTime = -10f;
 
     void OnTriggerStay2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
 
         PlayerHide playerHide = other.GetComponent<PlayerHide>();
-
-        if (gameOverManager == null)
-        {
-            Debug.LogWarning("GameOverManager is not assigned!");
-            return;
-        }
-
-        // If player is hiding, drone ignores
         if (playerHide != null && playerHide.isHiding)
         {
             Debug.Log("Player is hiding — safe from drone");
             return;
         }
 
-        // Player is in spotlight and not hiding: game over
-        Debug.Log("Player caught in spotlight! Game Over!");
-        gameOverManager.TriggerGameOver();
+        if (Time.time - lastHitTime < hitCooldown) return;
+        lastHitTime = Time.time;
+
+        PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            Debug.Log("Player caught by drone — Taking damage");
+            playerHealth.TakeDamage();
+        }
+        else
+        {
+            Debug.LogWarning("PlayerHealth not found!");
+        }
     }
 }

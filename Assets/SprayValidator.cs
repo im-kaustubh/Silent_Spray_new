@@ -35,7 +35,7 @@ public class SprayValidator : MonoBehaviour
         if (foundCorrectGraffitiInZone && sprayedGraffitiName == correctName)
         {
             ShowMonologue("Congrats! You did it.");
-            // StartCoroutine(CompleteMission());  //Use for CompleteMission()
+           
         }
         else
         {
@@ -61,11 +61,4 @@ public class SprayValidator : MonoBehaviour
         if (monologuePanel != null)
             monologuePanel.SetActive(false);
     }
-
-    // This is for the direct scene changes when player spray at right spot and used right graffiti
-    /*IEnumerator CompleteMission()
-    {
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("NewspaperArea");
-    }*/
 }

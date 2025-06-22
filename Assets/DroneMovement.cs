@@ -12,7 +12,7 @@ public class DroneMovement : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        originalXScale = Mathf.Abs(transform.localScale.x);  // Store the custom size
+        originalXScale = Mathf.Abs(transform.localScale.x);  // Which Stor the custom size...
     }
 
     void Update()

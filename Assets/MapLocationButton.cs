@@ -25,7 +25,7 @@ public class MapLocationButton : MonoBehaviour
 
     private void LoadScene()
     {
-        Time.timeScale = 1f;                                  // Ensure time is not paused
+        Time.timeScale = 1f;                                  // helps to ensure time is not paused
         SceneManager.LoadScene(sceneToLoad);                  // Load the selected scene
     }
 }

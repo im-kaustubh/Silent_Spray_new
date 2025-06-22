@@ -16,7 +16,7 @@ public class FadeManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            // Also keep FadePanel alive
+            // Which keep FadePanel alive
             if (fadeAnimator != null)
             {
                 DontDestroyOnLoad(fadeAnimator.gameObject);
@@ -41,7 +41,7 @@ public class FadeManager : MonoBehaviour
     private IEnumerator FadeAndSwitch(string sceneName)
     {
         fadeAnimator.SetTrigger("StartFadeOut"); // only play when triggered
-        yield return new WaitForSeconds(1f); // wait for fade animation to finish
+        yield return new WaitForSeconds(1f); // waits for fade animation to finish
         SceneManager.LoadScene(sceneName);
     }
 }

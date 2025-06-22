@@ -4,7 +4,7 @@ public class GraffitiSelector : MonoBehaviour
 {
     [Header("UI Elements")]
     public GameObject graffitiPanel;
-    public GameObject[] graffitiPrefabs; // These should be animated graffiti prefabs
+    public GameObject[] graffitiPrefabs;
 
     private GameObject selectedGraffitiPrefab;
     private int selectedIndex = 0; // Track which graffiti is selected
