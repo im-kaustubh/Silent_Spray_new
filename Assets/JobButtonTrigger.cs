@@ -9,6 +9,13 @@ public class JobButtonTrigger : MonoBehaviour
 
     public void OnButtonClick()
     {
-        jobInfoPanelManager.ShowInfo(riddleText, sceneName);
+        if (jobInfoPanelManager.IsPanelOpen)
+        {
+            jobInfoPanelManager.HideInfo();
+        }
+        else
+        {
+            jobInfoPanelManager.ShowInfo(riddleText, sceneName);
+        }
     }
 }

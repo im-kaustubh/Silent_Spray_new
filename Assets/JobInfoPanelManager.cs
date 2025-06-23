@@ -1,6 +1,5 @@
-using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class JobInfoPanelManager : MonoBehaviour
 {
@@ -9,6 +8,8 @@ public class JobInfoPanelManager : MonoBehaviour
     public GameObject mapPanel;
     private string selectedScene;
 
+    public bool IsPanelOpen => jobInfoPanel.activeSelf;
+
     public void ShowInfo(string message, string sceneName)
     {
         riddleText.text = message;
@@ -16,18 +17,23 @@ public class JobInfoPanelManager : MonoBehaviour
         jobInfoPanel.SetActive(true);
     }
 
-    public void HideInfoPanel()
+    public void HideInfo()
     {
         jobInfoPanel.SetActive(false);
+    }
+
+    public void OnBackButtonPressed()
+    {
+        HideInfo();
     }
 
     public void AcceptMission()
     {
         Debug.Log("Mission Accepted! Opening Map.");
-        jobInfoPanel.SetActive(false); // Hide job info panel
+        HideInfo();
         if (mapPanel != null)
         {
-            mapPanel.SetActive(true);  // Show map panel
+            mapPanel.SetActive(true);
         }
         else
         {

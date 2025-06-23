@@ -1526,7 +1526,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1918650072}
         m_TargetAssemblyTypeName: JobInfoPanelManager, Assembly-CSharp
-        m_MethodName: HideInfoPanel
+        m_MethodName: HideInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
