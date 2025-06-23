@@ -37,6 +37,11 @@ public class PlayerHide : MonoBehaviour
             animator.enabled = false;
             spriteRenderer.sprite = hidingSprite;
 
+            // Set transparency to 50%
+            Color color = spriteRenderer.color;
+            color.a = 0.7f;
+            spriteRenderer.color = color;
+
             Debug.Log("🔒 Player is hiding");
 
             if (promptFader != null)
@@ -47,11 +52,16 @@ public class PlayerHide : MonoBehaviour
         {
             isHiding = false;
 
-            // again enable animation and restore normal sprite
+            // Enable animation & switch to normal sprite
             animator.enabled = true;
             spriteRenderer.sprite = normalSprite;
 
-            Debug.Log("🚶‍♂️ Player moved and is now visible");
+            // Restore full opacity
+            Color color = spriteRenderer.color;
+            color.a = 1f;
+            spriteRenderer.color = color;
+
+            Debug.Log("Player moved and is now visible");
         }
     }
 
@@ -76,7 +86,13 @@ public class PlayerHide : MonoBehaviour
                 isHiding = false;
                 animator.enabled = true;
                 spriteRenderer.sprite = normalSprite;
-                Debug.Log("🚶‍♂️ Left hiding spot, unhidden");
+
+                // Restore full opacity
+                Color color = spriteRenderer.color;
+                color.a = 1f;
+                spriteRenderer.color = color;
+
+                Debug.Log("Left hiding spot, unhidden");
             }
 
             if (promptFader != null)
