@@ -67,25 +67,26 @@ public class GraffitiSprayer : MonoBehaviour
 
             if (currentFrameIndex >= currentFrames.Length)
             {
-                FinalizeSpray();
+                FinalizeSpray(currentFrames.Length - 1);
             }
         }
 
         if (Input.GetKeyUp(KeyCode.E) && isSpraying)
         {
-            FinalizeSpray();
+            int frameToPaint = Mathf.Clamp(currentFrameIndex - 1, 0, currentFrames.Length - 1);
+            FinalizeSpray(frameToPaint);
         }
     }
 
-    void FinalizeSpray()
+    void FinalizeSpray(int frameIndexToUse)
     {
         isSpraying = false;
         sprayTimer = 0f;
 
         if (staticPreview != null)
         {
-            staticPreview.name = "StaticGraffiti_" + currentFrames[^1].name;
-            staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[^1];
+            staticPreview.name = "StaticGraffiti_" + currentFrames[frameIndexToUse].name;
+            staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[frameIndexToUse];
 
             var validator = Object.FindFirstObjectByType<SprayValidator>();
             if (validator != null)
