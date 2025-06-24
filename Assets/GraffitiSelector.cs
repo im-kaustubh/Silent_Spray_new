@@ -1,25 +1,26 @@
-using UnityEngine;
+﻿using UnityEngine;
+
+[System.Serializable]
+public class GraffitiData
+{
+    public string name;
+    public Sprite[] frames;
+}
 
 public class GraffitiSelector : MonoBehaviour
 {
     [Header("UI Elements")]
     public GameObject graffitiPanel;
-    public GameObject[] graffitiPrefabs;
 
-    private GameObject selectedGraffitiPrefab;
-    private int selectedIndex = 0; // Track which graffiti is selected
+    [Header("Graffiti Setup")]
+    public GraffitiData[] graffitiData;
+
+    private int selectedIndex = 0;
 
     void Start()
     {
         if (graffitiPanel != null)
             graffitiPanel.SetActive(false);
-
-        // Default selection to first graffiti
-        if (graffitiPrefabs.Length > 0)
-        {
-            selectedGraffitiPrefab = graffitiPrefabs[0];
-            selectedIndex = 0;
-        }
     }
 
     void Update()
@@ -33,23 +34,31 @@ public class GraffitiSelector : MonoBehaviour
 
     public void SelectGraffiti(int index)
     {
-        if (index >= 0 && index < graffitiPrefabs.Length)
+        if (index >= 0 && index < graffitiData.Length)
         {
-            selectedGraffitiPrefab = graffitiPrefabs[index];
             selectedIndex = index;
-
             if (graffitiPanel != null)
                 graffitiPanel.SetActive(false);
+
+            Debug.Log("🎯 Selected graffiti: " + GetSelectedGraffitiName());
         }
     }
 
-    public GameObject GetSelectedGraffiti()
+    public int GetSelectedIndex() => selectedIndex;
+
+    public string GetSelectedGraffitiName()
     {
-        return selectedGraffitiPrefab;
+        return graffitiData != null && selectedIndex < graffitiData.Length
+            ? graffitiData[selectedIndex].name
+            : "Unnamed";
     }
 
-    public int GetSelectedIndex()
+    public Sprite[] GetSelectedGraffitiFrames()
     {
-        return selectedIndex;
+        if (graffitiData != null && selectedIndex < graffitiData.Length)
+            return graffitiData[selectedIndex].frames;
+
+        Debug.LogWarning("⚠️ No frames found for selected graffiti");
+        return null;
     }
 }

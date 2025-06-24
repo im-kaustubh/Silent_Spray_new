@@ -13,16 +13,26 @@ public class SprayProgress : MonoBehaviour
     private bool isRefilling = false;
     private float refillTimer = 0f;
 
+    private bool useFrameProgress = false;
+    private float frameMaxValue = 1f;
+
     public bool CanSpray => currentValue > 0f;
     public float CurrentValue => currentValue;
 
     void Start()
     {
-        spraySlider.value = currentValue;
+        if (spraySlider != null)
+        {
+            spraySlider.minValue = 0f;
+            spraySlider.maxValue = 1f;
+            spraySlider.value = currentValue;
+        }
     }
 
     void Update()
     {
+        if (useFrameProgress) return; // Skip if in frame-controlled spray mode
+
         if (Input.GetKey(KeyCode.E) && currentValue > 0f)
         {
             isSpraying = true;
@@ -31,7 +41,9 @@ public class SprayProgress : MonoBehaviour
 
             currentValue -= Time.deltaTime / sprayTime;
             currentValue = Mathf.Clamp01(currentValue);
-            spraySlider.value = currentValue;
+
+            if (spraySlider != null)
+                spraySlider.value = currentValue;
         }
 
         if (Input.GetKeyUp(KeyCode.E))
@@ -43,24 +55,58 @@ public class SprayProgress : MonoBehaviour
         if (!isSpraying && currentValue < 1f)
         {
             refillTimer += Time.deltaTime;
-
             if (refillTimer >= refillDelay)
-            {
                 isRefilling = true;
-            }
         }
 
         if (isRefilling)
         {
             currentValue += Time.deltaTime * refillSpeed;
             currentValue = Mathf.Clamp01(currentValue);
-            spraySlider.value = currentValue;
+
+            if (spraySlider != null)
+                spraySlider.value = currentValue;
 
             if (currentValue >= 1f)
             {
                 isRefilling = false;
                 refillTimer = 0f;
             }
+        }
+    }
+
+    // Called by GraffitiSprayer: switches to frame-controlled mode
+    public void SetMaxValue(int max)
+    {
+        useFrameProgress = true;
+        frameMaxValue = max;
+
+        if (spraySlider != null)
+        {
+            spraySlider.minValue = 0f;
+            spraySlider.maxValue = frameMaxValue;
+            spraySlider.value = 0f;
+        }
+    }
+
+    public void SetValue(int val)
+    {
+        useFrameProgress = true;
+
+        if (spraySlider != null)
+            spraySlider.value = Mathf.Clamp(val, 0, frameMaxValue);
+    }
+
+    public void ResetToTimeBased()
+    {
+        useFrameProgress = false;
+        currentValue = 1f;
+
+        if (spraySlider != null)
+        {
+            spraySlider.minValue = 0f;
+            spraySlider.maxValue = 1f;
+            spraySlider.value = currentValue;
         }
     }
 }
