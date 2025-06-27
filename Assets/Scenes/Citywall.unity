@@ -17294,6 +17294,8 @@ MonoBehaviour:
   - {fileID: 1574056639}
   - {fileID: 279776676}
   - {fileID: 259275149}
+  playerTransform: {fileID: 1460480208}
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &554070793
 Transform:
   m_ObjectHideFlags: 0
@@ -38499,6 +38501,8 @@ MonoBehaviour:
   - {fileID: 1574056639}
   - {fileID: 279776676}
   - {fileID: 259275149}
+  playerTransform: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1478987187
 GameObject:
   m_ObjectHideFlags: 0

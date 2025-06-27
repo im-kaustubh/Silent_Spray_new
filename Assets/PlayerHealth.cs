@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System; 
 
 public class PlayerHealth : MonoBehaviour
 {
     public Image[] hearts;
-    private int currentHealth = 3;
+    public Transform playerTransform;
+    public Vector3 startPosition; // Set this to where the player should respawn
 
-    private GameOverManager gameOverManager;
+    private int currentHealth = 3;
     private float hitCooldown = 2f;
     private float lastHitTime = -10f;
+
+    private GameOverManager gameOverManager;
 
     void Start()
     {
@@ -18,6 +20,14 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.LogWarning("⚠️ GameOverManager not found in scene!");
         }
+
+        // Optional: set default respawn point from player's current position
+        if (playerTransform == null)
+        {
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+        startPosition = playerTransform.position;
     }
 
     public void TakeDamage()
@@ -40,8 +50,13 @@ public class PlayerHealth : MonoBehaviour
                 gameOverManager.TriggerGameOver();
             }
         }
-        FindObjectOfType<CameraShake>().Shake();
+        else
+        {
+            Debug.Log("🚨 Player caught — respawning at start");
+            playerTransform.position = startPosition;
 
-
+            // Optional: shake camera
+            FindObjectOfType<CameraShake>()?.Shake();
+        }
     }
 }
