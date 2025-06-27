@@ -8,6 +8,8 @@ public class MapLocationButton : MonoBehaviour
     //public Animator sunsetAnimator;
     public float animationDuration = 2f;
 
+    [SerializeField] GameObject animationObject;
+
     /* public void LoadLocation()
     {
         Debug.Log("Playing sunset before loading: " + sceneToLoad);
@@ -26,7 +28,7 @@ public class MapLocationButton : MonoBehaviour
         }
     } */
 
-    private void LoadScene()
+    public void LoadScene()
     {
         Time.timeScale = 1f;                                  // helps to ensure time is not paused
         SceneManager.LoadScene(sceneToLoad);                  // Load the selected scene
@@ -40,6 +42,7 @@ public class MapLocationButton : MonoBehaviour
     IEnumerator PlayAnimation()
     {
         yield return new WaitForSeconds(animationDuration);
+        animationObject.SetActive(false);
         LoadScene();
     }
 

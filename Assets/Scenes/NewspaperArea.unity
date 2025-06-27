@@ -1024,7 +1024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Cemetery
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,6 +1985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: Citywall
   animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &782245624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,7 +2813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: NewspaperArea
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &1135020107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3204,7 +3207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Harbor
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &1225933581
 GameObject:
   m_ObjectHideFlags: 0
@@ -4806,7 +4810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Trainstation
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
