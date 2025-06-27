@@ -19,6 +19,10 @@ public class PlayerHide : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
+        // Ensure player is on Ground sorting layer
+        spriteRenderer.sortingLayerName = "Ground";
+        spriteRenderer.sortingOrder = 1;
+
         if (hidePrompt != null)
         {
             promptFader = hidePrompt.GetComponent<HidePromptFader>();
@@ -37,10 +41,8 @@ public class PlayerHide : MonoBehaviour
             animator.enabled = false;
             spriteRenderer.sprite = hidingSprite;
 
-            // Set transparency to 50%
-            Color color = spriteRenderer.color;
-            color.a = 0.7f;
-            spriteRenderer.color = color;
+            // Move player behind hiding spot
+            spriteRenderer.sortingOrder = -1;
 
             Debug.Log("🔒 Player is hiding");
 
@@ -56,10 +58,8 @@ public class PlayerHide : MonoBehaviour
             animator.enabled = true;
             spriteRenderer.sprite = normalSprite;
 
-            // Restore full opacity
-            Color color = spriteRenderer.color;
-            color.a = 1f;
-            spriteRenderer.color = color;
+            // Restore sprite order to front
+            spriteRenderer.sortingOrder = 1;
 
             Debug.Log("Player moved and is now visible");
         }
@@ -87,10 +87,8 @@ public class PlayerHide : MonoBehaviour
                 animator.enabled = true;
                 spriteRenderer.sprite = normalSprite;
 
-                // Restore full opacity
-                Color color = spriteRenderer.color;
-                color.a = 1f;
-                spriteRenderer.color = color;
+                // Restore sprite order
+                spriteRenderer.sortingOrder = 1;
 
                 Debug.Log("Left hiding spot, unhidden");
             }
