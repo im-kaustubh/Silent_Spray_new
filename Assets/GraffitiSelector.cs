@@ -1,12 +1,5 @@
 ﻿using UnityEngine;
 
-[System.Serializable]
-public class GraffitiData
-{
-    public string name;
-    public Sprite[] frames;
-}
-
 public class GraffitiSelector : MonoBehaviour
 {
     [Header("UI Elements")]
@@ -59,6 +52,15 @@ public class GraffitiSelector : MonoBehaviour
             return graffitiData[selectedIndex].frames;
 
         Debug.LogWarning("⚠️ No frames found for selected graffiti");
+        return null;
+    }
+
+    public GameObject GetSelectedPrefab()
+    {
+        if (graffitiData != null && selectedIndex < graffitiData.Length)
+            return graffitiData[selectedIndex].prefab;
+
+        Debug.LogWarning("⚠️ No prefab found for selected graffiti");
         return null;
     }
 }

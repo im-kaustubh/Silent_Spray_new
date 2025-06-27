@@ -4,109 +4,97 @@ using UnityEngine.UI;
 public class SprayProgress : MonoBehaviour
 {
     public Slider spraySlider;
-    public float sprayTime = 9f;
-    public float refillDelay = 3f;
-    public float refillSpeed = 3f;
+    public float refillDelay = 5f;
+    public float refillSpeed = 0.4f;
 
-    private float currentValue = 1f;
-    private bool isSpraying = false;
+    private float sprayCapacity = 1f;        // Full spray
+    private float sprayUsed = 0f;            // Accumulated spray usage
+    private float sprayCostPerFrame = 0.1f;  // Dynamic cost per graffiti frame
+
     private bool isRefilling = false;
     private float refillTimer = 0f;
+    private bool sprayBlocked = false;
 
-    private bool useFrameProgress = false;
-    private float frameMaxValue = 1f;
-
-    public bool CanSpray => currentValue > 0f;
-    public float CurrentValue => currentValue;
+    public bool CanSpray => !sprayBlocked;
+    public bool IsRefilling => isRefilling;
 
     void Start()
     {
         if (spraySlider != null)
         {
             spraySlider.minValue = 0f;
-            spraySlider.maxValue = 1f;
-            spraySlider.value = currentValue;
+            spraySlider.maxValue = sprayCapacity;
+            spraySlider.value = sprayCapacity;
+            spraySlider.direction = Slider.Direction.RightToLeft; // ✅ Right to Left
         }
     }
 
     void Update()
     {
-        if (useFrameProgress) return; // Skip if in frame-controlled spray mode
-
-        if (Input.GetKey(KeyCode.E) && currentValue > 0f)
-        {
-            isSpraying = true;
-            isRefilling = false;
-            refillTimer = 0f;
-
-            currentValue -= Time.deltaTime / sprayTime;
-            currentValue = Mathf.Clamp01(currentValue);
-
-            if (spraySlider != null)
-                spraySlider.value = currentValue;
-        }
-
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            isSpraying = false;
-            refillTimer = 0f;
-        }
-
-        if (!isSpraying && currentValue < 1f)
+        if (sprayBlocked)
         {
             refillTimer += Time.deltaTime;
             if (refillTimer >= refillDelay)
+            {
                 isRefilling = true;
+            }
         }
 
         if (isRefilling)
         {
-            currentValue += Time.deltaTime * refillSpeed;
-            currentValue = Mathf.Clamp01(currentValue);
+            sprayUsed -= Time.deltaTime * refillSpeed;
+            sprayUsed = Mathf.Clamp(sprayUsed, 0f, sprayCapacity);
 
             if (spraySlider != null)
-                spraySlider.value = currentValue;
+                spraySlider.value = sprayCapacity - sprayUsed;
 
-            if (currentValue >= 1f)
+            if (sprayUsed <= 0f)
             {
+                sprayBlocked = false;
                 isRefilling = false;
                 refillTimer = 0f;
             }
         }
     }
 
-    // Called by GraffitiSprayer: switches to frame-controlled mode
-    public void SetMaxValue(int max)
+    /// <summary>
+    /// Called at the start of spraying to set spray cost based on graffiti frames
+    /// </summary>
+    public void SetSprayCostPerFrame(int totalFrames)
     {
-        useFrameProgress = true;
-        frameMaxValue = max;
-
-        if (spraySlider != null)
-        {
-            spraySlider.minValue = 0f;
-            spraySlider.maxValue = frameMaxValue;
-            spraySlider.value = 0f;
-        }
+        sprayCostPerFrame = 1f / totalFrames;
     }
 
-    public void SetValue(int val)
+    /// <summary>
+    /// Call once per painted frame. Returns false if spray is empty.
+    /// </summary>
+    public bool UseSprayPerFrame()
     {
-        useFrameProgress = true;
+        if (sprayBlocked) return false;
+
+        sprayUsed += sprayCostPerFrame;
 
         if (spraySlider != null)
-            spraySlider.value = Mathf.Clamp(val, 0, frameMaxValue);
+            spraySlider.value = sprayCapacity - sprayUsed;
+
+        if (sprayUsed >= sprayCapacity)
+        {
+            sprayBlocked = true;
+            refillTimer = 0f;
+            return false;
+        }
+
+        return true;
     }
 
-    public void ResetToTimeBased()
+    public void ResetSpray()
     {
-        useFrameProgress = false;
-        currentValue = 1f;
+        sprayUsed = 0f;
+        sprayBlocked = false;
+        isRefilling = false;
+        refillTimer = 0f;
 
         if (spraySlider != null)
-        {
-            spraySlider.minValue = 0f;
-            spraySlider.maxValue = 1f;
-            spraySlider.value = currentValue;
-        }
+            spraySlider.value = sprayCapacity;
     }
 }

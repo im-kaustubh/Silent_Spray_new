@@ -1,38 +1,10 @@
-﻿/*
+﻿
 using UnityEngine;
 
 public class SprayController : MonoBehaviour
 {
     public KeyCode sprayKey = KeyCode.E;
-    private bool isSpraying = false;
-
-    void Update()
-    {
-        if (Input.GetKey(sprayKey))
-        {
-            if (!isSpraying)
-            {
-                isSpraying = true;
-                Debug.Log("🎨 Spraying started...");
-            }
-        }
-        else
-        {
-            if (isSpraying)
-            {
-                isSpraying = false;
-                Debug.Log("🛑 Spraying stopped.");
-            }
-        }
-    }
-}
-*/
-using UnityEngine;
-
-public class SprayController : MonoBehaviour
-{
-    public KeyCode sprayKey = KeyCode.E;
-    public GameObject sprayProgressBar; // 🔧 Assign in Inspector (keep disabled in Hierarchy)
+    public GameObject sprayProgressBar; // Assign in Inspector (keep disabled in Hierarchy)
 
     private bool isSpraying = false;
 
@@ -40,7 +12,7 @@ public class SprayController : MonoBehaviour
     {
         if (sprayProgressBar != null)
         {
-            sprayProgressBar.SetActive(true); // 🧪 TEMP: Force ON for debug — remove later
+            sprayProgressBar.SetActive(true); //Force ON for debug — remove later
             Debug.Log("✅ Forced SprayProgressBar ON at start (for test).");
         }
         else

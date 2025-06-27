@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GraffitiSprayer : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class GraffitiSprayer : MonoBehaviour
     public Transform sprayPoint;
 
     public GameObject sprayProgressBar;
-    private Slider progressSlider;
+    public GameObject monologuePanel;
+    public TextMeshProUGUI monologueText;
+    public QTEManager qteManager;
 
     private Sprite[] currentFrames;
     private float sprayTimer;
@@ -16,18 +19,38 @@ public class GraffitiSprayer : MonoBehaviour
     private bool isSpraying;
 
     private GameObject staticPreview;
+    private bool qteStarted = false;
+    private bool qteCompleted = false;
+
+    private bool sprayFinished = false;
+    private bool sprayLockedUntilKeyReleased = false;
+    private bool waitingForEReleaseAfterSuccess = false;
 
     void Start()
     {
         if (sprayProgressBar != null)
-        {
-            progressSlider = sprayProgressBar.GetComponent<Slider>();
             sprayProgressBar.SetActive(false);
-        }
+
+        if (monologuePanel != null)
+            monologuePanel.SetActive(false);
     }
 
     void Update()
     {
+        if ((sprayFinished || sprayLockedUntilKeyReleased) && Input.GetKey(KeyCode.E))
+        {
+            waitingForEReleaseAfterSuccess = true;
+            return;
+        }
+
+        if (waitingForEReleaseAfterSuccess && Input.GetKeyUp(KeyCode.E))
+        {
+            sprayFinished = false;
+            sprayLockedUntilKeyReleased = false;
+            waitingForEReleaseAfterSuccess = false;
+            return;
+        }
+
         string graffitiName = graffitiSelector.GetSelectedGraffitiName();
         if (string.IsNullOrEmpty(graffitiName)) return;
 
@@ -39,6 +62,10 @@ public class GraffitiSprayer : MonoBehaviour
                 isSpraying = true;
                 sprayTimer = 0f;
                 currentFrameIndex = 0;
+                qteStarted = false;
+                qteCompleted = false;
+
+                sprayProgress.SetSprayCostPerFrame(currentFrames.Length);
 
                 if (staticPreview == null)
                 {
@@ -50,53 +77,117 @@ public class GraffitiSprayer : MonoBehaviour
                 }
 
                 sprayProgressBar.SetActive(true);
-                sprayProgress.SetMaxValue(currentFrames.Length);
             }
         }
 
         if (isSpraying && Input.GetKey(KeyCode.E))
         {
+            if (qteStarted && !qteCompleted) return;
+
             sprayTimer += Time.deltaTime;
 
             if (currentFrameIndex < currentFrames.Length && sprayTimer >= currentFrameIndex + 1f)
             {
-                staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[currentFrameIndex];
-                sprayProgress.SetValue(currentFrameIndex + 1);
-                currentFrameIndex++;
-            }
+                if (currentFrameIndex == currentFrames.Length - 1)
+                {
+                    staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[currentFrameIndex];
+                    currentFrameIndex++;
+                    FinalizeSpray(currentFrames.Length - 1);
+                    return;
+                }
 
-            if (currentFrameIndex >= currentFrames.Length)
-            {
-                FinalizeSpray(currentFrames.Length - 1);
+                if (!sprayProgress.CanSpray || !sprayProgress.UseSprayPerFrame())
+                {
+                    FailSpray("You don't have enough spray! Wait 5 seconds...");
+                    return;
+                }
+
+                staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[currentFrameIndex];
+                currentFrameIndex++;
+
+                if (currentFrameIndex == 4 && !qteStarted)
+                {
+                    qteStarted = true;
+                    qteManager.BeginQTE(this);
+                }
             }
         }
 
         if (Input.GetKeyUp(KeyCode.E) && isSpraying)
         {
-            int frameToPaint = Mathf.Clamp(currentFrameIndex - 1, 0, currentFrames.Length - 1);
-            FinalizeSpray(frameToPaint);
+            if (!qteCompleted)
+            {
+                FailSpray("Ohh! You lose your progress");
+            }
+            else
+            {
+                int frameToPaint = Mathf.Clamp(currentFrameIndex - 1, 0, currentFrames.Length - 1);
+                FinalizeSpray(frameIndexToUse: frameToPaint);
+            }
         }
     }
+
+    public void OnQTESuccess() => qteCompleted = true;
+
+    public void OnQTEFail() => FailSpray("Ohh! You lose your progress");
 
     void FinalizeSpray(int frameIndexToUse)
     {
         isSpraying = false;
         sprayTimer = 0f;
+        sprayFinished = true;
+        sprayLockedUntilKeyReleased = true;
+        waitingForEReleaseAfterSuccess = true;
 
         if (staticPreview != null)
         {
-            staticPreview.name = "StaticGraffiti_" + currentFrames[frameIndexToUse].name;
-            staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[frameIndexToUse];
+            Destroy(staticPreview);
+            staticPreview = null;
+        }
+
+        GameObject prefabToPlace = graffitiSelector.GetSelectedPrefab();
+        if (prefabToPlace != null)
+        {
+            GameObject sprayed = Instantiate(prefabToPlace, sprayPoint.position, Quaternion.identity);
+            sprayed.name = prefabToPlace.name + "(Clone)";
 
             var validator = Object.FindFirstObjectByType<SprayValidator>();
             if (validator != null)
-                validator.ValidateSpray(staticPreview.name);
+                validator.ValidateSpray(sprayed.name);
+        }
 
+        sprayProgressBar.SetActive(false);
+    }
+
+    void FailSpray(string message)
+    {
+        isSpraying = false;
+        sprayTimer = 0f;
+        currentFrameIndex = 0;
+        sprayFinished = false;
+        sprayLockedUntilKeyReleased = true;
+        waitingForEReleaseAfterSuccess = true;
+
+        if (staticPreview != null)
+        {
+            Destroy(staticPreview);
             staticPreview = null;
         }
 
         sprayProgressBar.SetActive(false);
-        sprayProgress.ResetToTimeBased();
+
+        if (monologuePanel != null && monologueText != null)
+        {
+            monologuePanel.SetActive(true);
+            monologueText.text = message;
+            Invoke(nameof(HideMonologue), 2.5f);
+        }
+    }
+
+    void HideMonologue()
+    {
+        if (monologuePanel != null)
+            monologuePanel.SetActive(false);
     }
 
     void LoadFrames(string graffitiName)

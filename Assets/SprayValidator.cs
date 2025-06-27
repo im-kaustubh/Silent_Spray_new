@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SprayValidator : MonoBehaviour
@@ -35,20 +34,20 @@ public class SprayValidator : MonoBehaviour
         if (foundCorrectGraffitiInZone && sprayedGraffitiName == correctName)
         {
             ShowMonologue("Congrats! You did it.");
-           
         }
         else
         {
             ShowMonologue("You are at the wrong place or using wrong graffiti.");
         }
     }
+
     void ShowMonologue(string message)
     {
         if (monologuePanel != null && monologueText != null)
         {
             monologuePanel.SetActive(true);
             monologueText.text = message;
-            Invoke("HideMonologue", 3f);
+            Invoke(nameof(HideMonologue), 3f);
         }
         else
         {
