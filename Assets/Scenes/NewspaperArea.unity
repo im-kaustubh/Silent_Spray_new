@@ -272,10 +272,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 668908285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00002670288, y: -0.000015258789}
-  m_SizeDelta: {x: 1922.5327, y: 942.3958}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00018310547, y: -23.2164}
+  m_SizeDelta: {x: 0.00036621, y: 46.4327}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &219857207
 Animator:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -203279889, guid: dedc7568f736c974ab06fbca27979cfa, type: 3}
+  m_Sprite: {fileID: -944307200, guid: b51c0c8160d50c34ab0a703dac2f2716, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -949,9 +949,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 219857205}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 427491256}
         m_TargetAssemblyTypeName: MapLocationButton, Assembly-CSharp
-        m_MethodName: LoadLocation
+        m_MethodName: LoadLocationWithAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1012,8 +1024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Cemetery
-  sunsetAnimator: {fileID: 0}
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,9 +1909,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 219857205}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 748221782}
         m_TargetAssemblyTypeName: MapLocationButton, Assembly-CSharp
-        m_MethodName: LoadLocation
+        m_MethodName: LoadLocationWithAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1960,8 +1984,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Citywall
-  sunsetAnimator: {fileID: 0}
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &782245624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,10 +2750,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1056107963}
-        m_TargetAssemblyTypeName: MapLocationButton, Assembly-CSharp
-        m_MethodName: LoadLocation
-        m_Mode: 1
+      - m_Target: {fileID: 1137411301}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2789,8 +2813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: NewspaperArea
-  sunsetAnimator: {fileID: 0}
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &1135020107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,9 +3132,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 219857205}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1198813819}
         m_TargetAssemblyTypeName: MapLocationButton, Assembly-CSharp
-        m_MethodName: LoadLocation
+        m_MethodName: LoadLocationWithAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3171,8 +3207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Harbor
-  sunsetAnimator: {fileID: 0}
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1 &1225933581
 GameObject:
   m_ObjectHideFlags: 0
@@ -4699,9 +4735,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 219857205}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2008191030}
         m_TargetAssemblyTypeName: MapLocationButton, Assembly-CSharp
-        m_MethodName: LoadLocation
+        m_MethodName: LoadLocationWithAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4762,8 +4810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Trainstation
-  sunsetAnimator: {fileID: 0}
-  animationDuration: 2
+  animationDuration: 1
+  animationObject: {fileID: 219857205}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
