@@ -31,6 +31,9 @@ public class JobInfoPanelManager : MonoBehaviour
     {
         Debug.Log("Mission Accepted! Opening Map.");
         HideInfo();
+
+        Time.timeScale = 1f;
+
         if (mapPanel != null)
         {
             mapPanel.SetActive(true);
