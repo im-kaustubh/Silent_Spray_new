@@ -32,8 +32,8 @@ public class GameOverManager : MonoBehaviour
 
     public void GoToMenu()
     {
-        Debug.Log("Menu pressed — Loading 'Newspaper' scene");
+        Debug.Log("Menu pressed — Loading 'Start Menu' scene");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("NewspaperArea");
+        SceneManager.LoadScene(0);
     }
 }
