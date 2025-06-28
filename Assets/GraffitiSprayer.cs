@@ -131,6 +131,8 @@ public class GraffitiSprayer : MonoBehaviour
 
     public void OnQTEFail() => FailSpray("Ohh! You lose your progress");
 
+    // ... everything above remains the same
+
     void FinalizeSpray(int frameIndexToUse)
     {
         isSpraying = false;
@@ -151,6 +153,9 @@ public class GraffitiSprayer : MonoBehaviour
             GameObject sprayed = Instantiate(prefabToPlace, sprayPoint.position, Quaternion.identity);
             sprayed.name = prefabToPlace.name + "(Clone)";
 
+            // ✅ Tag the graffiti so PlayerHealth can find and delete it when needed
+            sprayed.tag = "SprayedGraffiti";
+
             var validator = Object.FindFirstObjectByType<SprayValidator>();
             if (validator != null)
                 validator.ValidateSpray(sprayed.name);
@@ -158,6 +163,9 @@ public class GraffitiSprayer : MonoBehaviour
 
         sprayProgressBar.SetActive(false);
     }
+
+    // ... rest remains unchanged
+
 
     void FailSpray(string message)
     {

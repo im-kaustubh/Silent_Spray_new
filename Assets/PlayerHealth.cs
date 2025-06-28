@@ -5,8 +5,9 @@ public class PlayerHealth : MonoBehaviour
 {
     public Image[] hearts;
     public Transform playerTransform;
-    public Vector3 startPosition; // Set this to where the player should respawn
+    public Vector3 startPosition;
 
+    private Vector3 startScale;
     private int currentHealth = 3;
     private float hitCooldown = 2f;
     private float lastHitTime = -10f;
@@ -21,13 +22,23 @@ public class PlayerHealth : MonoBehaviour
             Debug.LogWarning("⚠️ GameOverManager not found in scene!");
         }
 
-        // Optional: set default respawn point from player's current position
         if (playerTransform == null)
         {
-            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                playerTransform = playerObj.transform;
+            }
+            else
+            {
+                Debug.LogError("❌ Player GameObject with tag 'Player' not found!");
+                return;
+            }
         }
 
+        // Store start position and scale
         startPosition = playerTransform.position;
+        startScale = playerTransform.localScale;
     }
 
     public void TakeDamage()
@@ -52,10 +63,20 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            Debug.Log("🚨 Player caught — respawning at start");
-            playerTransform.position = startPosition;
+            Debug.Log("🚨 Player caught — respawning");
 
-            // Optional: shake camera
+            // 🔥 Destroy all sprayed graffitis
+            GameObject[] sprayed = GameObject.FindGameObjectsWithTag("SprayedGraffiti");
+            foreach (GameObject g in sprayed)
+            {
+                Destroy(g);
+            }
+
+            // ⏪ Reset position and scale
+            playerTransform.position = startPosition;
+            playerTransform.localScale = startScale;
+
+            // 💢 Camera shake
             FindObjectOfType<CameraShake>()?.Shake();
         }
     }
