@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private Animator animator;
 
-
+    [SerializeField] private AudioSource walkingSound;
 
     void Start()
     {
@@ -47,6 +47,15 @@ public class PlayerMovement : MonoBehaviour
         // Set walking animation state
         animator.SetBool("isWalking", movement.x != 0);
 
+        if (movement.x != 0 && !walkingSound.isPlaying)
+        {
+            walkingSound.Play();
+        }
+        else if (movement.x == 0 && walkingSound.isPlaying)
+        {
+            walkingSound.Stop();
+        }
+
     }
 
 
@@ -55,10 +64,12 @@ public class PlayerMovement : MonoBehaviour
     if (movement.x == 0)
     {
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+         
     }
     else
     {
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
+           
     }
 }
 }
