@@ -7,6 +7,7 @@ public class SprayController : MonoBehaviour
     public GameObject sprayProgressBar; // Assign in Inspector (keep disabled in Hierarchy)
 
     private bool isSpraying = false;
+    [SerializeField] AudioSource spraySound;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class SprayController : MonoBehaviour
             {
                 isSpraying = true;
                 Debug.Log("🎨 Spraying started...");
+                spraySound.Play();
             }
 
             if (sprayProgressBar != null && !sprayProgressBar.activeSelf)
@@ -43,6 +45,7 @@ public class SprayController : MonoBehaviour
             {
                 isSpraying = false;
                 Debug.Log("🛑 Spraying stopped.");
+                spraySound.Stop();
             }
 
             if (sprayProgressBar != null && sprayProgressBar.activeSelf)
