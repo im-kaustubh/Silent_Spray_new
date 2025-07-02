@@ -1,26 +1,11 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SprayController : MonoBehaviour
 {
     public KeyCode sprayKey = KeyCode.E;
-    public GameObject sprayProgressBar; // Assign in Inspector (keep disabled in Hierarchy)
+    [SerializeField] private AudioSource spraySound;
 
     private bool isSpraying = false;
-    [SerializeField] AudioSource spraySound;
-
-    void Start()
-    {
-        if (sprayProgressBar != null)
-        {
-            sprayProgressBar.SetActive(true); //Force ON for debug — remove later
-            Debug.Log("✅ Forced SprayProgressBar ON at start (for test).");
-        }
-        else
-        {
-            Debug.LogError("❌ SprayProgressBar NOT assigned in SprayController!");
-        }
-    }
 
     void Update()
     {
@@ -29,14 +14,7 @@ public class SprayController : MonoBehaviour
             if (!isSpraying)
             {
                 isSpraying = true;
-                Debug.Log("🎨 Spraying started...");
-                spraySound.Play();
-            }
-
-            if (sprayProgressBar != null && !sprayProgressBar.activeSelf)
-            {
-                sprayProgressBar.SetActive(true);
-                Debug.Log("✅ SprayProgressBar shown.");
+                spraySound?.Play();
             }
         }
         else
@@ -44,14 +22,7 @@ public class SprayController : MonoBehaviour
             if (isSpraying)
             {
                 isSpraying = false;
-                Debug.Log("🛑 Spraying stopped.");
-                spraySound.Stop();
-            }
-
-            if (sprayProgressBar != null && sprayProgressBar.activeSelf)
-            {
-                sprayProgressBar.SetActive(false);
-                Debug.Log("❌ SprayProgressBar hidden.");
+                spraySound?.Stop();
             }
         }
     }

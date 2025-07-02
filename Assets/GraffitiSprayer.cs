@@ -5,10 +5,9 @@ using TMPro;
 public class GraffitiSprayer : MonoBehaviour
 {
     public GraffitiSelector graffitiSelector;
-    public SprayProgress sprayProgress;
     public Transform sprayPoint;
 
-    public GameObject sprayProgressBar;
+    public Slider graffitiProgressBar;
     public GameObject monologuePanel;
     public TextMeshProUGUI monologueText;
     public QTEManager qteManager;
@@ -28,9 +27,6 @@ public class GraffitiSprayer : MonoBehaviour
 
     void Start()
     {
-        if (sprayProgressBar != null)
-            sprayProgressBar.SetActive(false);
-
         if (monologuePanel != null)
             monologuePanel.SetActive(false);
     }
@@ -65,18 +61,19 @@ public class GraffitiSprayer : MonoBehaviour
                 qteStarted = false;
                 qteCompleted = false;
 
-                sprayProgress.SetSprayCostPerFrame(currentFrames.Length);
-
                 if (staticPreview == null)
                 {
                     staticPreview = new GameObject("StaticPreview");
                     SpriteRenderer renderer = staticPreview.AddComponent<SpriteRenderer>();
                     renderer.sortingLayerName = "Ground";
                     renderer.sortingOrder = 5;
-                    staticPreview.transform.position = sprayPoint.position;
                 }
 
-                sprayProgressBar.SetActive(true);
+                // ✅ Always reset position to sprayPoint
+                staticPreview.transform.position = sprayPoint.position;
+
+                graffitiProgressBar.value = 0f;
+                graffitiProgressBar.gameObject.SetActive(true);
             }
         }
 
@@ -90,19 +87,20 @@ public class GraffitiSprayer : MonoBehaviour
             {
                 if (currentFrameIndex == currentFrames.Length - 1)
                 {
-                    staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[currentFrameIndex];
+                    if (!qteCompleted)
+                        return;
+
+                    SetStaticPreviewFrame(currentFrameIndex);
                     currentFrameIndex++;
                     FinalizeSpray(currentFrames.Length - 1);
                     return;
                 }
 
-                if (!sprayProgress.CanSpray || !sprayProgress.UseSprayPerFrame())
-                {
-                    FailSpray("You don't have enough spray! Wait 5 seconds...");
-                    return;
-                }
+                SetStaticPreviewFrame(currentFrameIndex);
 
-                staticPreview.GetComponent<SpriteRenderer>().sprite = currentFrames[currentFrameIndex];
+                if (graffitiProgressBar != null && currentFrames.Length > 0)
+                    graffitiProgressBar.value = (float)(currentFrameIndex + 1) / currentFrames.Length;
+
                 currentFrameIndex++;
 
                 if (currentFrameIndex == 4 && !qteStarted)
@@ -121,17 +119,33 @@ public class GraffitiSprayer : MonoBehaviour
             }
             else
             {
-                int frameToPaint = Mathf.Clamp(currentFrameIndex - 1, 0, currentFrames.Length - 1);
-                FinalizeSpray(frameIndexToUse: frameToPaint);
+                bool sprayFullyCompleted = (currentFrameIndex >= currentFrames.Length);
+
+                if (!sprayFullyCompleted)
+                {
+                    FailSpray("Ohh! You lose your graffiti");
+                }
+                else
+                {
+                    int frameToPaint = Mathf.Clamp(currentFrameIndex - 1, 0, currentFrames.Length - 1);
+                    FinalizeSpray(frameToPaint);
+                }
             }
+
+            if (graffitiProgressBar != null)
+                graffitiProgressBar.value = 0f;
         }
     }
 
     public void OnQTESuccess() => qteCompleted = true;
 
-    public void OnQTEFail() => FailSpray("Ohh! You lose your progress");
-
-    // ... everything above remains the same
+    public void OnQTEFail()
+    {
+        qteCompleted = false;
+        qteStarted = false;
+        isSpraying = false;
+        FailSpray("Ohh! You lose your progress");
+    }
 
     void FinalizeSpray(int frameIndexToUse)
     {
@@ -152,20 +166,24 @@ public class GraffitiSprayer : MonoBehaviour
         {
             GameObject sprayed = Instantiate(prefabToPlace, sprayPoint.position, Quaternion.identity);
             sprayed.name = prefabToPlace.name + "(Clone)";
-
-            // ✅ Tag the graffiti so PlayerHealth can find and delete it when needed
             sprayed.tag = "SprayedGraffiti";
+
+            // ✅ Ensure sprayed graffiti is behind player
+            SpriteRenderer sr = sprayed.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.sortingLayerName = "Ground";
+                sr.sortingOrder = -1;
+            }
 
             var validator = Object.FindFirstObjectByType<SprayValidator>();
             if (validator != null)
                 validator.ValidateSpray(sprayed.name);
         }
 
-        sprayProgressBar.SetActive(false);
+        if (graffitiProgressBar != null)
+            graffitiProgressBar.gameObject.SetActive(false);
     }
-
-    // ... rest remains unchanged
-
 
     void FailSpray(string message)
     {
@@ -173,8 +191,10 @@ public class GraffitiSprayer : MonoBehaviour
         sprayTimer = 0f;
         currentFrameIndex = 0;
         sprayFinished = false;
-        sprayLockedUntilKeyReleased = true;
-        waitingForEReleaseAfterSuccess = true;
+        sprayLockedUntilKeyReleased = false;
+        waitingForEReleaseAfterSuccess = false;
+        qteStarted = false;
+        qteCompleted = false;
 
         if (staticPreview != null)
         {
@@ -182,7 +202,11 @@ public class GraffitiSprayer : MonoBehaviour
             staticPreview = null;
         }
 
-        sprayProgressBar.SetActive(false);
+        if (graffitiProgressBar != null)
+        {
+            graffitiProgressBar.value = 0f;
+            graffitiProgressBar.gameObject.SetActive(false);
+        }
 
         if (monologuePanel != null && monologueText != null)
         {
@@ -207,4 +231,18 @@ public class GraffitiSprayer : MonoBehaviour
         else
             Debug.Log("✅ Loaded " + currentFrames.Length + " frames from selector");
     }
+
+    void SetStaticPreviewFrame(int index)
+    {
+        if (staticPreview != null && index < currentFrames.Length)
+        {
+            var renderer = staticPreview.GetComponent<SpriteRenderer>();
+            renderer.sprite = currentFrames[index];
+            renderer.sortingLayerName = "Ground";  // Must match your sorting layer
+            renderer.sortingOrder = -1;            // Behind the player
+            staticPreview.transform.localScale = Vector3.one;
+            staticPreview.transform.position = sprayPoint.position;
+        }
+    }
+
 }
