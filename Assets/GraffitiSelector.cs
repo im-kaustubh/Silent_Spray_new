@@ -21,7 +21,13 @@ public class GraffitiSelector : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             if (graffitiPanel != null)
+            {
                 graffitiPanel.SetActive(!graffitiPanel.activeSelf);
+
+                // 🎵 Play click sound when toggling the panel
+                if (ButtonSound.Instance != null)
+                    ButtonSound.Instance.PlayClick();
+            }
         }
     }
 
