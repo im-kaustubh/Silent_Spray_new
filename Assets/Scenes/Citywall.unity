@@ -35607,7 +35607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: NewspaperArea
-  animationDuration: 1
+  animationDuration: 2
   animationObject: {fileID: 451136435}
 --- !u!114 &1124431898
 MonoBehaviour:
@@ -39164,7 +39164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Citywall
-  animationDuration: 1
+  animationDuration: 2
   animationObject: {fileID: 451136435}
 --- !u!114 &1702297146
 MonoBehaviour:
