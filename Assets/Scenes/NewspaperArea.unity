@@ -1591,12 +1591,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ebd2c11c0b1c248b0603796b332d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riddleText: "Nbwkv cjhe pwbem dxrx lh fvdbmcggrhv yfillkyhl vwzh ki lav vwtk ix
-    irml cfojgvsk,\u200B  Myy geu cjhe bwtin jxjnk uvnoxvh lbdy sgu vmkuyf.                                                                                 
-    \u200B  T xurx kbsm eynxi mdxvjk lzfwgkfq zlujwj nzx suyzraw hw jslk mztuiol.\u200B 
-    Fhdr kbglv qzh iyuhxhasv nzx sfswv cf yccyak qaec jsben lav jsmy,qzxiy jnjn sgu
-    nafv ealj.\u200B  \u200B \\n\\n   The letters are shifting in my head\u2026\u200B\\n  
-    Rust. A key. A French idea. That's all that comes back.\u200B"
+  riddleText: "Wh_r_ ir_n v_ins l_ad t_ _blivi_nand f_ _tsteps \n\u200B_cho t_ the
+    b_at _f past j_urn_ys. The _ld ir_n h_art rests b_tw_ _n time and burden.   
+    \n A gaz_ that n_v_r sl_ _ps sil_ntly guards th_ baggag_ _f past shad_ws. \n\r_nly
+    th_se wh_ r_c_gniz_ the blad_ in flight will paint th_ path, \r\nwh_r_ rust and
+    time kiss.\r\n\n                                                                             "
   sceneName: Train Station
   jobInfoPanelManager: {fileID: 1918650072}
 --- !u!1 &634989578
@@ -1644,7 +1643,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 96a3d8d5a0c616c43bec52deac087ae3, type: 3}
   m_Resource: {fileID: 8300000, guid: 96a3d8d5a0c616c43bec52deac087ae3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.015
+  m_Volume: 0.02
   m_Pitch: 0.77
   Loop: 1
   Mute: 0
