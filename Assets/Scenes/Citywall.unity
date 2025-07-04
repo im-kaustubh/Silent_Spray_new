@@ -240,7 +240,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7339149984724004702, guid: a65d8e8150f7c9b47b8cfe920eb0f2c1, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -523,7 +523,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -1685015043152139212, guid: c2ae04cf07d1a984aa005c7ce2263be4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -862,7 +862,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168319279
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8212083223570875934, guid: 0cfa5ddb9a577f544ae7b8ef09f58c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -888,7 +888,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.06
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1299,7 +1299,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_Resource: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.002
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2307,7 +2307,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3535221090349844623, guid: 2e8faed3683fcfd41aa90dcd671b7500, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2614,7 +2614,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7197037453587260008, guid: a29163005f609104480a2ac363b2c627, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3046,7 +3046,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7197037453587260008, guid: a29163005f609104480a2ac363b2c627, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3876,7 +3876,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3535221090349844623, guid: 2e8faed3683fcfd41aa90dcd671b7500, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4720,7 +4720,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168319279
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8212083223570875934, guid: 0cfa5ddb9a577f544ae7b8ef09f58c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4746,7 +4746,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.06
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17592,7 +17592,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2600190059882760175, guid: 8e4536e793e4ae34c8bcdefee798e41c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17840,7 +17840,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7339149984724004702, guid: a65d8e8150f7c9b47b8cfe920eb0f2c1, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -18723,7 +18723,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 2717137844711140414, guid: 85b230a82b5a18545ab7709e5fe4b7e6, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -19080,7 +19080,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2600190059882760175, guid: 8e4536e793e4ae34c8bcdefee798e41c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19596,7 +19596,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 5218823490559287709, guid: 3fb51f1d1140cca4a8e4cb10b6ed1aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -30262,7 +30262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &899436752
 Transform:
   m_ObjectHideFlags: 0
@@ -30346,7 +30346,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 6910940618791622545, guid: 78832d21c215c8e45a919a6de56d6c17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -30387,6 +30387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSceneName: NewspaperArea
+  sunrise: {fileID: 451136435}
+  animationDuration: 2
 --- !u!61 &904423359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30626,7 +30628,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_Resource: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.002
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -30785,7 +30787,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -36333,7 +36335,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168319279
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8212083223570875934, guid: 0cfa5ddb9a577f544ae7b8ef09f58c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -36359,7 +36361,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.06
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -36488,7 +36490,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_Resource: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.002
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -36868,7 +36870,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_Resource: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.002
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -37270,7 +37272,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 5218823490559287709, guid: 3fb51f1d1140cca4a8e4cb10b6ed1aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -37656,7 +37658,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3535221090349844623, guid: 2e8faed3683fcfd41aa90dcd671b7500, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -37728,7 +37730,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7197037453587260008, guid: a29163005f609104480a2ac363b2c627, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -38123,7 +38125,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.06
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -38480,7 +38482,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168319279
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8212083223570875934, guid: 0cfa5ddb9a577f544ae7b8ef09f58c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -38715,7 +38717,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7339149984724004702, guid: a65d8e8150f7c9b47b8cfe920eb0f2c1, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -39100,7 +39102,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168319279
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8212083223570875934, guid: 0cfa5ddb9a577f544ae7b8ef09f58c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -39126,7 +39128,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.06
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -39255,7 +39257,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_Resource: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.002
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -39818,7 +39820,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: 1222433895525058534, guid: e2b731da8aeed5d45aff3bc1d133c82e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -40313,7 +40315,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7197037453587260008, guid: a29163005f609104480a2ac363b2c627, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -40537,7 +40539,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3535221090349844623, guid: 2e8faed3683fcfd41aa90dcd671b7500, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -41597,7 +41599,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 5218823490559287709, guid: 3fb51f1d1140cca4a8e4cb10b6ed1aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -41920,7 +41922,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168319279
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8212083223570875934, guid: 0cfa5ddb9a577f544ae7b8ef09f58c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -41962,7 +41964,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.06
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -42488,7 +42490,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7197037453587260008, guid: a29163005f609104480a2ac363b2c627, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -42560,7 +42562,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 5218823490559287709, guid: 3fb51f1d1140cca4a8e4cb10b6ed1aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -42780,7 +42782,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2143956748839619354, guid: 5b05b186b93d16241b85ad5d6b6bdeb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -42867,7 +42869,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3535221090349844623, guid: 2e8faed3683fcfd41aa90dcd671b7500, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -42954,7 +42956,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 5218823490559287709, guid: 3fb51f1d1140cca4a8e4cb10b6ed1aca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -43048,7 +43050,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 1b164a7648faa6b438fc5de36c68638e, type: 3}
   m_Resource: {fileID: 8300000, guid: 1b164a7648faa6b438fc5de36c68638e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.04
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -43303,7 +43305,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2600190059882760175, guid: 8e4536e793e4ae34c8bcdefee798e41c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -43907,7 +43909,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168319279
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -8212083223570875934, guid: 0cfa5ddb9a577f544ae7b8ef09f58c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -43933,7 +43935,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.06
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -44299,7 +44301,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -7339149984724004702, guid: a65d8e8150f7c9b47b8cfe920eb0f2c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -44505,7 +44507,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_Resource: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.002
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -44710,7 +44712,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 6853316077166303748, guid: 59f4ae0a7f4a561459967d287b71810b, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -44734,7 +44736,7 @@ GameObject:
   - component: {fileID: 2140867598}
   - component: {fileID: 2140867599}
   m_Layer: 0
-  m_Name: Alarm
+  m_Name: FlyingSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44765,10 +44767,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
-  m_Resource: {fileID: 8300000, guid: f01ce0737b6e10a4daa1e335f57490aa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
+  m_Resource: {fileID: 8300000, guid: 704cb20ce33453a44a671b2abee065bb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.017
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
