@@ -6,11 +6,13 @@ public class PillarInteraction : MonoBehaviour
     public GameObject jobPanel;
 
     private bool playerNear = false;
+    [SerializeField] private AudioSource paperSound;
 
     void Update()
     {
         if (playerNear && Input.GetKeyDown(KeyCode.F))
         {
+            paperSound.Play();
             instructionText.SetActive(false);
             jobPanel.SetActive(true);
             Time.timeScale = 0f; // optional: pause game while UI open
