@@ -57,11 +57,14 @@ TagManager:
   - name: Wall
     uniqueID: 3852237547
     locked: 0
+  - name: Hiding Spots
+    uniqueID: 1096807675
+    locked: 0
   - name: Ground
     uniqueID: 2307971691
     locked: 0
-  - name: Hiding Spots
-    uniqueID: 1096807675
+  - name: PlayerTrain
+    uniqueID: 2978860823
     locked: 0
   - name: UI
     uniqueID: 1168319279
