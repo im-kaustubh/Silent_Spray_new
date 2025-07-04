@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6b45555511cecd468f3829f5a025064
+guid: adc888edb2734f0409e969811dfafd50
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "glu\u0308hbirne_0": 3866701953202683363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
