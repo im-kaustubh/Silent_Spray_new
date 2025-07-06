@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8e9ac76c4d80b4f80321716764a180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Trainstation
+  sceneToLoad: Train Station
   animationDuration: 2
   animationObject: {fileID: 451136435}
 --- !u!114 &224131662
