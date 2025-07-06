@@ -38221,30 +38221,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintClips:
   - audioClip: {fileID: 8300000, guid: 82ccc8db317253248ae81171a6c5c7bd, type: 3}
-    subtitle: Ohh, I heard something about Ceasar Cipher !
+    subtitle: Oh, I think I once heard something about a ceaser cipher!
   - audioClip: {fileID: 8300000, guid: 7abbbc57b28c74e45bfdb2a12b3a8c37, type: 3}
-    subtitle: 'If I remember correctly in the Ceasar Cipher, You shift the letter
+    subtitle: 'If I remember correctly, in the ceaser cipher you shift the letter
       in the alphabet with a certain value.
 
 '
   - audioClip: {fileID: 8300000, guid: c6f973e47080da149b89fa8330a1399f, type: 3}
-    subtitle: 'The letter say something about four steps it''s only could be that
-      the letters are shifted by 4 so for an example "A" would be a "D".
-
-'
+    subtitle: "The letter says something about 4 steps... it could be that the lettersare
+      shifted by 4. So, for example, an D would be a A\u2026 \r\n"
   - audioClip: {fileID: 8300000, guid: be5ea887c347aa645888a621829d84ac, type: 3}
-    subtitle: 'There''s a wall that''s forgotten how to speak, could this perhaps
-      refer to the Citywall?
-
-'
+    subtitle: "...there's a wall that's forgotten how to speak... could this perhaps
+      refer to the city wall?\r"
   - audioClip: {fileID: 8300000, guid: 2f94e2df05fc693418934009b134896f, type: 3}
-    subtitle: 'Between the red that sits in silence in the Iron that flickers by
-      night maybe it could mean a BENCH and a LANTERN.
+    subtitle: "...Between the red that sits in silence and the iron that flickers
+      by night\u2026 maybe it could mean a bench and a lantern?\r\n\n"
+  - audioClip: {fileID: 8300000, guid: a6e94e9f56af3144a9b0a9b4bca9fbd9, type: 3}
+    subtitle: '...a sentinel with button eyes and a heart of cotton...a teddy bear
+      has button eyes and is also filled with cotton
 
 '
-  - audioClip: {fileID: 8300000, guid: a6e94e9f56af3144a9b0a9b4bca9fbd9, type: 3}
-    subtitle: A sentinel with button eyes and a heart of cotton a teddy bear has
-      bottom eyes and is also filled with cotton.
   subtitleText: {fileID: 15036722}
   audioSource: {fileID: 483712773}
   hintPanel: {fileID: 483712769}

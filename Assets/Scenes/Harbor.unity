@@ -54450,19 +54450,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintClips:
   - audioClip: {fileID: 8300000, guid: a3092479cb119254bbad1702005627e3, type: 3}
-    subtitle: The letter c moth as if they're looking back at me from the other side.
+    subtitle: The letters seem off... as if they're looking back at me from the other
+      side.
   - audioClip: {fileID: 8300000, guid: 7cacbbea22c678844a1e8415d82f17bb, type: 3}
-    subtitle: I once heard of a cipher where a becomes Z, B becomes y like reading
+    subtitle: I once heard of a cipher where A becomes Z, B becomes Y... like reading
       the alphabet in a mirror.
   - audioClip: {fileID: 8300000, guid: b5eeb0366175f244d8451563bf704a5d, type: 3}
-    subtitle: all ropes salt sleeping sounds like the sea to Me Maybe somewhere boats
-      gather.
+    subtitle: "Old ropes\u2026 salt sleeping\u2026 sounds like the sea to me. Maybe
+      somewhere boats gather? \r"
   - audioClip: {fileID: 8300000, guid: 3ec4d250e79065341b7a062d5d89a9c4, type: 3}
-    subtitle: it mentions a figure with flowing hair and a guage deep into the sea
-      that almost sounds like a figurehead on a ship a mermaid maybe.
+    subtitle: "It mentions a figure with flowing hair and a gaze deep into the sea.
+      That almost sounds like a figurehead on a ship\u2026 a mermaid, maybe?"
   - audioClip: {fileID: 8300000, guid: b293671ae373d38418fc1e256bb3cf89, type: 3}
-    subtitle: above the helm of silver Curve and small Sparks that don't flicker,
-      could that be a moon surrounded with stars.
+    subtitle: "Above the helm, a silver curve\u2026 and small sparks that don\u2019t
+      flicker? Could that be a moon surrounded by stars?"
   subtitleText: {fileID: 15036722}
   audioSource: {fileID: 483712773}
   hintPanel: {fileID: 483712769}

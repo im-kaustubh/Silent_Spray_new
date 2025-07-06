@@ -16394,31 +16394,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hintClips:
-  - audioClip: {fileID: 8300000, guid: 82ccc8db317253248ae81171a6c5c7bd, type: 3}
-    subtitle: Ohh, I heard something about Ceasar Cipher !
-  - audioClip: {fileID: 8300000, guid: 7abbbc57b28c74e45bfdb2a12b3a8c37, type: 3}
-    subtitle: 'If I remember correctly in the Ceasar Cipher, You shift the letter
-      in the alphabet with a certain value.
-
-'
-  - audioClip: {fileID: 8300000, guid: c6f973e47080da149b89fa8330a1399f, type: 3}
-    subtitle: 'The letter say something about four steps it''s only could be that
-      the letters are shifted by 4 so for an example "A" would be a "D".
-
-'
-  - audioClip: {fileID: 8300000, guid: be5ea887c347aa645888a621829d84ac, type: 3}
-    subtitle: 'There''s a wall that''s forgotten how to speak, could this perhaps
-      refer to the Citywall?
-
-'
-  - audioClip: {fileID: 8300000, guid: 2f94e2df05fc693418934009b134896f, type: 3}
-    subtitle: 'Between the red that sits in silence in the Iron that flickers by
-      night maybe it could mean a BENCH and a LANTERN.
-
-'
-  - audioClip: {fileID: 8300000, guid: a6e94e9f56af3144a9b0a9b4bca9fbd9, type: 3}
-    subtitle: A sentinel with button eyes and a heart of cotton a teddy bear has
-      bottom eyes and is also filled with cotton.
+  - audioClip: {fileID: 8300000, guid: 803796ef4ebfb004c8b7daa0b786bb24, type: 3}
+    subtitle: It seems that certain letters are missing. 2 vowels. if i find out
+      the specific vowels and use them appropriately, i can understand the text
+  - audioClip: {fileID: 8300000, guid: a541a135ec0fbdc4fb3265dde192467b, type: 3}
+    subtitle: "Iron veins and past journeys\u2026 this place sounds like the train
+      station to me\n"
+  - audioClip: {fileID: 8300000, guid: 11174ea26b9efe44197ac228661b4960, type: 3}
+    subtitle: "The old iron heart rests between time and burden \u2026 maybe the
+      place has something to do with iron between a clock and luggage\n"
+  - audioClip: {fileID: 8300000, guid: c230926647159bf43a609ba3913d361e, type: 3}
+    subtitle: "A gaze that never sleeps silently guards the baggage\u2026 could it
+      be that there is a symbol on the luggage? Maybe something like an eye?\n"
+  - audioClip: {fileID: 8300000, guid: ed83bb34c4d366a4c92d6f095ac03936, type: 3}
+    subtitle: "The blade in flight\u2026 not a weapon thrown, but one that flies
+      on its own. Could it be something with wings\u2026 a bird ... and a knife?\n"
   subtitleText: {fileID: 795521887}
   audioSource: {fileID: 816189262}
   hintPanel: {fileID: 816189260}
@@ -64960,7 +64950,6 @@ SceneRoots:
   - {fileID: 1862416365}
   - {fileID: 967101248}
   - {fileID: 1597109763}
-  - {fileID: 632374407}
   - {fileID: 1004900379}
   - {fileID: 995865872}
   - {fileID: 1062001331}
@@ -64975,3 +64964,4 @@ SceneRoots:
   - {fileID: 1345783940}
   - {fileID: 1669595655}
   - {fileID: 2100944825}
+  - {fileID: 632374407}

@@ -29138,20 +29138,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintClips:
   - audioClip: {fileID: 8300000, guid: 5ef8d712777f36e4fa778ab0fa873439, type: 3}
-    subtitle: the notes say something about numbers and letters what is the numbers
-      of the letters.
+    subtitle: "The note says something about numbers and letters\u2026 what if the
+      numbers are the letters?"
   - audioClip: {fileID: 8300000, guid: b74185b97c4789b44b844c2f3e41091d, type: 3}
-    subtitle: I think a is 1, b is 2. Could it be as simple as turning numbers into
-      letters.
-  - audioClip: {fileID: 8300000, guid: cfc1bb778965c0145a7bde54d277ff8a, type: 3}
-    subtitle: cold stones in silent sentinels sounds like the cemetery to me.
-  - audioClip: {fileID: 8300000, guid: 046039180d101bc41b43a074b1db8808, type: 3}
-    subtitle: the threshold in the box if the box is a coffin and the threshold may
-      be something like an entrance or a gate.
-  - audioClip: {fileID: 8300000, guid: e2216842be22697439469b79f1b253c0, type: 3}
-    subtitle: 'a withered Bloom once red roses are red and they can Bloom.
+    subtitle: 'I think A is 1, B is 2... Could it be as simple as turning numbers
+      back into letters?
 
 '
+  - audioClip: {fileID: 8300000, guid: cfc1bb778965c0145a7bde54d277ff8a, type: 3}
+    subtitle: "Cold stones & silent sentinels? Sounds like the cemetery to me\u2026"
+  - audioClip: {fileID: 8300000, guid: 046039180d101bc41b43a074b1db8808, type: 3}
+    subtitle: "the threshold and the box\" \u2026 if the box is a coffin\u2026 and
+      the treshold\u2026 \r\nmaybe something like an entrance or a gate?"
+  - audioClip: {fileID: 8300000, guid: e2216842be22697439469b79f1b253c0, type: 3}
+    subtitle: "A withered bloom, once red\u2026 roses are red\u2026 and they can
+      bloom\n"
   subtitleText: {fileID: 15036722}
   audioSource: {fileID: 483712773}
   hintPanel: {fileID: 483712769}
