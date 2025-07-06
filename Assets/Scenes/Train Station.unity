@@ -16412,6 +16412,7 @@ MonoBehaviour:
   subtitleText: {fileID: 795521887}
   audioSource: {fileID: 816189262}
   hintPanel: {fileID: 816189260}
+  jobInfoPanel: {fileID: 1851477480}
   closeButton: {fileID: 1639101896}
 --- !u!4 &632374407
 Transform:
@@ -51878,9 +51879,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 632374406}
         m_TargetAssemblyTypeName: HintManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: CloseJobInfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -17,6 +17,7 @@ public class HintManager : MonoBehaviour
     public TextMeshProUGUI subtitleText;
     public AudioSource audioSource;
     public GameObject hintPanel;
+    public GameObject jobInfoPanel;
     public Button closeButton;
 
     private int currentHintIndex = 0;
@@ -49,10 +50,19 @@ public class HintManager : MonoBehaviour
         currentHintIndex++; // Move to next for future click
     }
 
-    private void CloseHintPanel()
+    public void CloseHintPanel()
     {
         hintPanel.SetActive(false);
         audioSource.Stop();
         isPanelOpen = false;
+    }
+
+    public void CloseJobInfoPanel()
+    {
+        if (jobInfoPanel != null)
+        {
+            jobInfoPanel.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
 }
