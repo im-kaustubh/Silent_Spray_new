@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -13,31 +12,61 @@ public class SprayValidator : MonoBehaviour
     public GameObject monologuePanel;
     public TMP_Text monologueText;
 
-    public void ValidateSpray(string sprayedGraffitiName)
+    [Header("Audio Clips")]
+    public AudioClip wrongSpotClip;
+    public AudioClip wrongGraffitiClip;
+    public AudioClip correctSprayClip;
+
+    private AudioSource audioSource;
+
+    void Start()
     {
-        string correctName = correctGraffitiPrefab.name + "(Clone)";
-        Collider2D[] overlaps = Physics2D.OverlapBoxAll(correctSpraySpot.position, spotSize, 0f);
-
-        bool foundCorrectGraffitiInZone = false;
-
-        foreach (Collider2D col in overlaps)
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
         {
-            if (col.gameObject.name == correctName)
-            {
-                foundCorrectGraffitiInZone = true;
-                break;
-            }
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        Debug.Log("Sprayed: " + sprayedGraffitiName + " | Needed: " + correctName + " | FoundInZone: " + foundCorrectGraffitiInZone);
+        if (monologuePanel != null)
+            monologuePanel.SetActive(false);
+    }
 
-        if (foundCorrectGraffitiInZone && sprayedGraffitiName == correctName)
+    public void ValidateSpray(GameObject sprayedGraffiti)
+    {
+        string sprayedName = sprayedGraffiti.name;
+        string correctName = correctGraffitiPrefab.name + "(Clone)";
+        Vector2 sprayPos = sprayedGraffiti.transform.position;
+
+        bool isInCorrectZone =
+            (sprayPos.x >= correctSpraySpot.position.x - spotSize.x / 2f &&
+             sprayPos.x <= correctSpraySpot.position.x + spotSize.x / 2f &&
+             sprayPos.y >= correctSpraySpot.position.y - spotSize.y / 2f &&
+             sprayPos.y <= correctSpraySpot.position.y + spotSize.y / 2f);
+
+        Debug.Log("Sprayed: " + sprayedName + " | Needed: " + correctName + " | InZone: " + isInCorrectZone);
+
+        if (isInCorrectZone && sprayedName == correctName)
         {
-            ShowMonologue("Congrats! You did it.");
+            PlaySound(correctSprayClip);
+            ShowMonologue("Congrats! You did it");
+        }
+        else if (isInCorrectZone && sprayedName != correctName)
+        {
+            PlaySound(wrongGraffitiClip);
+            ShowMonologue("You are at the right spot but used wrong graffiti");
         }
         else
         {
-            ShowMonologue("You are at the wrong place or using wrong graffiti.");
+            PlaySound(wrongSpotClip);
+            ShowMonologue("You are at the wrong place");
+        }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 

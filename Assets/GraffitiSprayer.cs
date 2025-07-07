@@ -178,7 +178,7 @@ public class GraffitiSprayer : MonoBehaviour
 
             var validator = Object.FindFirstObjectByType<SprayValidator>();
             if (validator != null)
-                validator.ValidateSpray(sprayed.name);
+                validator.ValidateSpray(sprayed);
         }
 
         if (graffitiProgressBar != null)
