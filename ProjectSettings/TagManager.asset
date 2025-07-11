@@ -8,6 +8,7 @@ TagManager:
   - Drone
   - Mailbox
   - SprayedGraffiti
+  - SprayableArea
   layers:
   - Default
   - TransparentFX

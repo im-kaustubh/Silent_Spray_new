@@ -25,6 +25,8 @@ public class GraffitiSprayer : MonoBehaviour
     private bool sprayLockedUntilKeyReleased = false;
     private bool waitingForEReleaseAfterSuccess = false;
 
+    private bool isInSprayArea = false; // ✅ Added to check sprayable zone
+
     void Start()
     {
         if (monologuePanel != null)
@@ -52,6 +54,12 @@ public class GraffitiSprayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (!isInSprayArea)
+            {
+                FailSpray("You can't spray here!");
+                return;
+            }
+
             LoadFrames(graffitiName);
             if (currentFrames.Length > 0)
             {
@@ -69,9 +77,7 @@ public class GraffitiSprayer : MonoBehaviour
                     renderer.sortingOrder = 5;
                 }
 
-                // ✅ Always reset position to sprayPoint
                 staticPreview.transform.position = sprayPoint.position;
-
                 graffitiProgressBar.value = 0f;
                 graffitiProgressBar.gameObject.SetActive(true);
             }
@@ -79,6 +85,12 @@ public class GraffitiSprayer : MonoBehaviour
 
         if (isSpraying && Input.GetKey(KeyCode.E))
         {
+            if (!isInSprayArea)
+            {
+                FailSpray("You can't spray here!");
+                return;
+            }
+
             if (qteStarted && !qteCompleted) return;
 
             sprayTimer += Time.deltaTime;
@@ -168,7 +180,6 @@ public class GraffitiSprayer : MonoBehaviour
             sprayed.name = prefabToPlace.name + "(Clone)";
             sprayed.tag = "SprayedGraffiti";
 
-            // ✅ Ensure sprayed graffiti is behind player
             SpriteRenderer sr = sprayed.GetComponent<SpriteRenderer>();
             if (sr != null)
             {
@@ -238,11 +249,23 @@ public class GraffitiSprayer : MonoBehaviour
         {
             var renderer = staticPreview.GetComponent<SpriteRenderer>();
             renderer.sprite = currentFrames[index];
-            renderer.sortingLayerName = "Ground";  // Must match your sorting layer
-            renderer.sortingOrder = -1;            // Behind the player
+            renderer.sortingLayerName = "Ground";
+            renderer.sortingOrder = -1;
             staticPreview.transform.localScale = Vector3.one;
             staticPreview.transform.position = sprayPoint.position;
         }
     }
 
+    // ✅ Detect if inside a sprayable zone
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("SprayableArea"))
+            isInSprayArea = true;
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("SprayableArea"))
+            isInSprayArea = false;
+    }
 }
