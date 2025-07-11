@@ -25,8 +25,6 @@ public class GraffitiSprayer : MonoBehaviour
     private bool sprayLockedUntilKeyReleased = false;
     private bool waitingForEReleaseAfterSuccess = false;
 
-    private bool isInSprayArea = false; // ✅ Added to check sprayable zone
-
     void Start()
     {
         if (monologuePanel != null)
@@ -54,7 +52,7 @@ public class GraffitiSprayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!isInSprayArea)
+            if (!IsSprayPointInsideArea())
             {
                 FailSpray("You can't spray here!");
                 return;
@@ -85,7 +83,7 @@ public class GraffitiSprayer : MonoBehaviour
 
         if (isSpraying && Input.GetKey(KeyCode.E))
         {
-            if (!isInSprayArea)
+            if (!IsSprayPointInsideArea())
             {
                 FailSpray("You can't spray here!");
                 return;
@@ -256,16 +254,34 @@ public class GraffitiSprayer : MonoBehaviour
         }
     }
 
-    // ✅ Detect if inside a sprayable zone
+    // Precise check: is sprayPoint inside a valid spray zone
+    bool IsSprayPointInsideArea()
+    {
+        Collider2D[] colliders = Physics2D.OverlapPointAll(sprayPoint.position);
+        foreach (Collider2D col in colliders)
+        {
+            if (col.CompareTag("SprayableArea"))
+                return true;
+        }
+        return false;
+    }
+
+    // Trigger detection (still useful for debug, not used for accuracy now)
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("ENTERED: " + other.name + " | TAG: " + other.tag);
         if (other.CompareTag("SprayableArea"))
-            isInSprayArea = true;
+        {
+            Debug.Log("✅ Inside SprayableArea!");
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("EXITED: " + other.name + " | TAG: " + other.tag);
         if (other.CompareTag("SprayableArea"))
-            isInSprayArea = false;
+        {
+            Debug.Log("⬅️ Exited SprayableArea.");
+        }
     }
 }

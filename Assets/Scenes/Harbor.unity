@@ -4736,7 +4736,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.2637787, y: 0.3875389}
+  m_Offset: {x: -0.23147583, y: 0.3875389}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4746,7 +4746,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.5661316, y: 2.970355}
+  m_Size: {x: 2.2911987, y: 2.970355}
   m_EdgeRadius: 4
 --- !u!4 &158600241
 Transform:
@@ -4757,7 +4757,7 @@ Transform:
   m_GameObject: {fileID: 158600239}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 264, y: -2.94, z: 0}
+  m_LocalPosition: {x: 261, y: -2.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55116,7 +55116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &899436752
 Transform:
   m_ObjectHideFlags: 0
@@ -60887,7 +60887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9075deb05bf56d141b9ccffce8b4b2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 10
   walkingSound: {fileID: 1460480216}
 --- !u!61 &1460480205
 BoxCollider2D:
