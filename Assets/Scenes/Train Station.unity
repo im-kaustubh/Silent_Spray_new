@@ -1085,6 +1085,7 @@ GameObject:
   - component: {fileID: 206464221}
   - component: {fileID: 206464223}
   - component: {fileID: 206464222}
+  - component: {fileID: 206464224}
   m_Layer: 0
   m_Name: Sky
   m_TagString: Untagged
@@ -12577,6 +12578,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &206464224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206464220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f9b795698498e4694f2f7b57a0cd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 463182601}
+  relativeMovement: 0.9
 --- !u!1 &214790869
 GameObject:
   m_ObjectHideFlags: 0
@@ -14570,7 +14585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &365509628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55230,6 +55245,7 @@ GameObject:
   - component: {fileID: 2098162817}
   - component: {fileID: 2098162819}
   - component: {fileID: 2098162818}
+  - component: {fileID: 2098162820}
   m_Layer: 0
   m_Name: Background Houses
   m_TagString: Untagged
@@ -64854,6 +64870,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2098162820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098162816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f9b795698498e4694f2f7b57a0cd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 463182601}
+  relativeMovement: 0.3
 --- !u!1 &2100944822
 GameObject:
   m_ObjectHideFlags: 0
