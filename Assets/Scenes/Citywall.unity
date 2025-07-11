@@ -43451,9 +43451,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintClips:
   - audioClip: {fileID: 8300000, guid: 82ccc8db317253248ae81171a6c5c7bd, type: 3}
-    subtitle: Oh, I think I once heard something about a ceaser cipher!
+    subtitle: Oh, I think I once heard something about a caeser cipher!
   - audioClip: {fileID: 8300000, guid: 7abbbc57b28c74e45bfdb2a12b3a8c37, type: 3}
-    subtitle: 'If I remember correctly, in the ceaser cipher you shift the letter
+    subtitle: 'If I remember correctly, in the caeser cipher you shift the letter
       in the alphabet with a certain value.
 
 '

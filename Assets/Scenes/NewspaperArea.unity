@@ -2866,7 +2866,7 @@ MonoBehaviour:
     rmklx, xlivi'w e aepp xlex'w jsvksxxir lsa xs wtieo. Mx riihw e ria jegi. Rsx
     e aspj, rsx e fmvh \u2014 e wirxmrip amxl fyxxsr iciw erh e lievx sj gsxxsr.
     Sri als wxecw, izir alir izivcxlmrk ipwi pieziw. Csy orsa xli tpegi.\\n\\nPS.
-    Remember to take 4 steps backwards\\n\\nYour old Friend Ceasar\\n"
+    Remember to take 4 steps backwards\\n\\nYour old Friend Caesar\\n"
   sceneName: Citywall
   jobInfoPanelManager: {fileID: 1918650072}
 --- !u!1 &1021287258
@@ -3505,7 +3505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1137411302
 RectTransform:
   m_ObjectHideFlags: 0
