@@ -14482,7 +14482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3866701953202683363, guid: 9ae5622278801974bb159079ee97c3ed, type: 3}
+  m_Sprite: {fileID: 3866701953202683363, guid: a5af66970bab03f4595167c126077ddb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17039,7 +17039,7 @@ Transform:
   m_GameObject: {fileID: 739048712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19173,9 +19173,9 @@ MonoBehaviour:
   spotSize: {x: 10, y: 10}
   monologuePanel: {fileID: 726350837}
   monologueText: {fileID: 1795792839}
-  wrongSpotClip: {fileID: 0}
-  wrongGraffitiClip: {fileID: 0}
-  correctSprayClip: {fileID: 0}
+  wrongSpotClip: {fileID: 8300000, guid: c6fe7bb0163f03e4fbeb6992dc56443b, type: 3}
+  wrongGraffitiClip: {fileID: 8300000, guid: ee03e16c1d767d74c9c76ca224617925, type: 3}
+  correctSprayClip: {fileID: 8300000, guid: 913ad9fed1b4c9d45b1623c7f7152f54, type: 3}
 --- !u!4 &967101248
 Transform:
   m_ObjectHideFlags: 0
@@ -19185,7 +19185,7 @@ Transform:
   m_GameObject: {fileID: 967101246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.05336, y: -0.86184, z: 0}
+  m_LocalPosition: {x: 65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52906,7 +52906,7 @@ GameObject:
   - component: {fileID: 1669595654}
   m_Layer: 0
   m_Name: CorrectSpraySpot
-  m_TagString: Untagged
+  m_TagString: SprayableArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
