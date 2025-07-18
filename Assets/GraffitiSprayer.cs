@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GraffitiSprayer : MonoBehaviour
 {
@@ -192,6 +193,13 @@ public class GraffitiSprayer : MonoBehaviour
 
         if (graffitiProgressBar != null)
             graffitiProgressBar.gameObject.SetActive(false);
+
+        GameManager.instance.SetRiddleSolved(GameManager.instance.activeRiddle);
+
+        if (GameManager.instance.AllRiddlesSolved())
+        {
+            SceneManager.LoadScene("Ending");
+        }
     }
 
     void FailSpray(string message)

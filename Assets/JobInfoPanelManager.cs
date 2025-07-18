@@ -7,14 +7,16 @@ public class JobInfoPanelManager : MonoBehaviour
     public TMP_Text riddleText;
     public GameObject mapPanel;
     private string selectedScene;
+    private int acceptedRiddle;
 
     public bool IsPanelOpen => jobInfoPanel.activeSelf;
 
-    public void ShowInfo(string message, string sceneName)
+    public void ShowInfo(string message, string sceneName, int riddleIndex)
     {
         riddleText.text = message;
         selectedScene = sceneName;
         jobInfoPanel.SetActive(true);
+        acceptedRiddle = riddleIndex;
     }
 
     public void HideInfo()
@@ -29,6 +31,7 @@ public class JobInfoPanelManager : MonoBehaviour
 
     public void AcceptMission()
     {
+        GameManager.instance.SetActiveRiddle(acceptedRiddle);
         Debug.Log("Mission Accepted! Opening Map.");
         HideInfo();
 

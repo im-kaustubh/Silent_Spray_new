@@ -6,6 +6,7 @@ public class JobButtonTrigger : MonoBehaviour
     public string riddleText;
     public string sceneName;
     public JobInfoPanelManager jobInfoPanelManager;
+    [SerializeField] int riddleIndex;
 
     public void OnButtonClick()
     {
@@ -15,7 +16,7 @@ public class JobButtonTrigger : MonoBehaviour
         }
         else
         {
-            jobInfoPanelManager.ShowInfo(riddleText, sceneName);
+            jobInfoPanelManager.ShowInfo(riddleText, sceneName, riddleIndex);
         }
     }
 }
