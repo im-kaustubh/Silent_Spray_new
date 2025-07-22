@@ -25409,7 +25409,7 @@ Transform:
   m_GameObject: {fileID: 904423355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.99, y: -0.74, z: -0}
+  m_LocalPosition: {x: 97.49, y: -0.72, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42505,6 +42505,7 @@ MonoBehaviour:
     numbers say more than letters\u200B"
   sceneName: 
   jobInfoPanelManager: {fileID: 183374928}
+  riddleIndex: 0
 --- !u!1 &1613867620
 GameObject:
   m_ObjectHideFlags: 0
