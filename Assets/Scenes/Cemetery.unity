@@ -44451,9 +44451,9 @@ MonoBehaviour:
   spotSize: {x: 10, y: 10}
   monologuePanel: {fileID: 657894899}
   monologueText: {fileID: 1458817637}
-  wrongSpotClip: {fileID: 0}
-  wrongGraffitiClip: {fileID: 0}
-  correctSprayClip: {fileID: 0}
+  wrongSpotClip: {fileID: 8300000, guid: c6fe7bb0163f03e4fbeb6992dc56443b, type: 3}
+  wrongGraffitiClip: {fileID: 8300000, guid: ee03e16c1d767d74c9c76ca224617925, type: 3}
+  correctSprayClip: {fileID: 8300000, guid: 913ad9fed1b4c9d45b1623c7f7152f54, type: 3}
 --- !u!1 &1799160432
 GameObject:
   m_ObjectHideFlags: 0
