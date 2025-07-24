@@ -9,6 +9,10 @@ TagManager:
   - Mailbox
   - SprayedGraffiti
   - SprayableArea
+  - HintPanel
+  - HintCloseButton
+  - HintAudioSource
+  - HintSubtitle
   layers:
   - Default
   - TransparentFX

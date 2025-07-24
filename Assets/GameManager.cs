@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public void SetRiddleSolved(int riddleNumber)
     {
         solvedRiddles[riddleNumber] = true;
-        //SaveProgress();
+        SaveProgress();
     }
 
     public bool AllRiddlesSolved()
@@ -56,11 +56,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Reset Progress")]
     public void ResetProgress()
     {
         PlayerPrefs.DeleteAll();
         for (int i = 0; i < solvedRiddles.Length; i++) {
             solvedRiddles[i] = false;
         }
+        SaveProgress();
     }
 }

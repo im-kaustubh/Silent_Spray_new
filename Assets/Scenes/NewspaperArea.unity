@@ -5754,6 +5754,120 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931991193}
   m_CullTransparentMesh: 1
+--- !u!1 &1945274860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945274862}
+  - component: {fileID: 1945274861}
+  m_Layer: 0
+  m_Name: HintManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1945274861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945274860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 078a4550786d12449a5503993efad58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRiddleHints:
+  - hints:
+    - hintAudios: {fileID: 8300000, guid: 82ccc8db317253248ae81171a6c5c7bd, type: 3}
+      hintText: Oh, I think I once heard something about a ceaser cipher
+    - hintAudios: {fileID: 8300000, guid: 7abbbc57b28c74e45bfdb2a12b3a8c37, type: 3}
+      hintText: If I remember correctly, in the ceaser cipher you shift the letter
+        in  the alphabet with a certain value
+    - hintAudios: {fileID: 8300000, guid: c6f973e47080da149b89fa8330a1399f, type: 3}
+      hintText: "The letter says something about 4 steps... it could be that the
+        letters are shifted by 4. So, for example, an D would be a A\u2026"
+    - hintAudios: {fileID: 8300000, guid: be5ea887c347aa645888a621829d84ac, type: 3}
+      hintText: ...there's a wall that's forgotten how to speak... could this perhaps
+        refer to the city wall?
+    - hintAudios: {fileID: 8300000, guid: 2f94e2df05fc693418934009b134896f, type: 3}
+      hintText: "...Between the red that sits in silence and the iron that flickers
+        by night\u2026 maybe it could mean a bench and a lantern?"
+    - hintAudios: {fileID: 8300000, guid: a6e94e9f56af3144a9b0a9b4bca9fbd9, type: 3}
+      hintText: ...a sentinel with button eyes and a heart of cotton...a teddy bear
+        has button eyes and is also filled with cotton
+  - hints:
+    - hintAudios: {fileID: 8300000, guid: 5ef8d712777f36e4fa778ab0fa873439, type: 3}
+      hintText: "The note says something about numbers and letters\u2026 what if
+        the numbers are the letters?"
+    - hintAudios: {fileID: 8300000, guid: b74185b97c4789b44b844c2f3e41091d, type: 3}
+      hintText: I think A is 1, B is 2... Could it be as simple as turning numbers
+        back into letters?
+    - hintAudios: {fileID: 8300000, guid: cfc1bb778965c0145a7bde54d277ff8a, type: 3}
+      hintText: "Cold stones & silent sentinels? Sounds like the cemetery to me\u2026"
+    - hintAudios: {fileID: 8300000, guid: 046039180d101bc41b43a074b1db8808, type: 3}
+      hintText: "the threshold and the box\" \u2026 if the box is a coffin\u2026
+        and the treshold\u2026 maybe something like an entrance or a gate"
+    - hintAudios: {fileID: 8300000, guid: e2216842be22697439469b79f1b253c0, type: 3}
+      hintText: "A withered bloom, once red\u2026 roses are red\u2026 and they can
+        bloom"
+  - hints:
+    - hintAudios: {fileID: 8300000, guid: a3092479cb119254bbad1702005627e3, type: 3}
+      hintText: "The letters seem off\u2026 as if they\u2019re looking back at me
+        from the other side."
+    - hintAudios: {fileID: 8300000, guid: 7cacbbea22c678844a1e8415d82f17bb, type: 3}
+      hintText: "I once heard of a cipher where A becomes Z, B becomes Y\u2026 like
+        reading the alphabet in a mirror."
+    - hintAudios: {fileID: 8300000, guid: b5eeb0366175f244d8451563bf704a5d, type: 3}
+      hintText: "Old ropes\u2026 salt sleeping\u2026 sounds like the sea to me. Maybe
+        somewhere boats gather?"
+    - hintAudios: {fileID: 8300000, guid: 3ec4d250e79065341b7a062d5d89a9c4, type: 3}
+      hintText: "It mentions a figure with flowing hair and a gaze deep into the
+        sea. That almost sounds like a figurehead on a ship\u2026 a mermaid, maybe?"
+    - hintAudios: {fileID: 8300000, guid: b293671ae373d38418fc1e256bb3cf89, type: 3}
+      hintText: "Above the helm, a silver curve\u2026 and small sparks that don\u2019t
+        flicker? Could that be a moon surrounded by stars?"
+  - hints:
+    - hintAudios: {fileID: 8300000, guid: 803796ef4ebfb004c8b7daa0b786bb24, type: 3}
+      hintText: It seems that certain letters are missing. 2 vowels. if i find out
+        the specific vowels and use them appropriately, i can understand the text
+    - hintAudios: {fileID: 8300000, guid: a541a135ec0fbdc4fb3265dde192467b, type: 3}
+      hintText: "iron veins and past journeys\u2026 this place sounds like the train
+        station to me"
+    - hintAudios: {fileID: 8300000, guid: 11174ea26b9efe44197ac228661b4960, type: 3}
+      hintText: "The old iron heart rests between time and burden \u2026 maybe the
+        place has something to do with iron between a clock and luggage"
+    - hintAudios: {fileID: 8300000, guid: c230926647159bf43a609ba3913d361e, type: 3}
+      hintText: "A gaze that never sleeps silently guards the baggage\u2026 could
+        it be that there is a symbol on the luggage? Maybe something like an eye?"
+    - hintAudios: {fileID: 8300000, guid: ed83bb34c4d366a4c92d6f095ac03936, type: 3}
+      hintText: "The blade in flight\u2026 not a weapon thrown, but one that flies
+        on its own. Could it be something with wings\u2026 a bird ... and a knife?"
+  subtitleText: {fileID: 0}
+  audioSource: {fileID: 0}
+  hintPanel: {fileID: 0}
+  closeButton: {fileID: 0}
+--- !u!4 &1945274862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945274860}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 476.02954, y: 201.0266, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &1948053242
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -6256,3 +6370,4 @@ SceneRoots:
   - {fileID: 2008682260}
   - {fileID: 1082428526}
   - {fileID: 737856076}
+  - {fileID: 1945274862}

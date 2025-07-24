@@ -31,6 +31,7 @@ public class HintManager : MonoBehaviour
 
     public void ShowHint()
     {
+
         if (hintClips == null || hintClips.Length == 0)
         {
             Debug.LogWarning("❗ No hints assigned.");
