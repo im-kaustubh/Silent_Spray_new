@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class DroneMovement : MonoBehaviour
 {
-    public float speed = 2f;
-    public float patrolDistance = 4f;
+    public float speed = 2f;                   // Normal patrol speed
+    public float patrolDistance = 4f;          // Distance it patrols
 
+    private float currentSpeed;                // Can be boosted temporarily
     private Vector3 startPosition;
     private int direction = 1;
     private float originalXScale;
@@ -12,20 +13,26 @@ public class DroneMovement : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        originalXScale = Mathf.Abs(transform.localScale.x);  // Which Stor the custom size...
+        originalXScale = Mathf.Abs(transform.localScale.x);
+
+        currentSpeed = speed;
+
+        // Register to DroneManager
+        if (DroneManager.Instance != null)
+            DroneManager.Instance.RegisterDrone(this);
     }
 
     void Update()
     {
         // Move the drone
-        transform.Translate(Vector3.right * direction * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * direction * currentSpeed * Time.deltaTime);
 
-        // Flip based on direction, but preserve original scale
+        // Flip sprite
         Vector3 scale = transform.localScale;
         scale.x = direction > 0 ? originalXScale : -originalXScale;
         transform.localScale = scale;
 
-        // Reverse direction at patrol limits
+        // Reverse direction at patrol bounds
         if (transform.position.x > startPosition.x + patrolDistance)
         {
             direction = -1;
@@ -34,5 +41,16 @@ public class DroneMovement : MonoBehaviour
         {
             direction = 1;
         }
+    }
+
+    // Called by DroneManager
+    public void SetSpeedBoost(float multiplier)
+    {
+        currentSpeed = speed * multiplier;
+    }
+
+    public void ResetSpeed()
+    {
+        currentSpeed = speed;
     }
 }

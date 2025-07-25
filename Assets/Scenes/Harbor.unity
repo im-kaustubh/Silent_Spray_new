@@ -55199,6 +55199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 713307509}
+  - component: {fileID: 713307510}
   m_Layer: 0
   m_Name: DroneManager
   m_TagString: Untagged
@@ -55221,6 +55222,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &713307510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713307507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3570e748e38e6fa45865af9a27d6736e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &739470197
 GameObject:
   m_ObjectHideFlags: 0
@@ -64186,7 +64199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1986995605
   m_SortingLayer: 5
-  m_SortingOrder: 10
+  m_SortingOrder: 8
   m_Sprite: {fileID: 1222433895525058534, guid: e2b731da8aeed5d45aff3bc1d133c82e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
