@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            //LoadProgress();  //should not be commented out in the endgame, but its annoying while programming
+            LoadProgress();  
         }
         else
         {
@@ -59,10 +59,13 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Reset Progress")]
     public void ResetProgress()
     {
+        Debug.Log("Deltete...");
         PlayerPrefs.DeleteAll();
         for (int i = 0; i < solvedRiddles.Length; i++) {
             solvedRiddles[i] = false;
         }
+        activeRiddle = -1;
+        Debug.Log("Delteted");
         SaveProgress();
     }
 }

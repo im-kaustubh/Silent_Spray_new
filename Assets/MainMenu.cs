@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        GameManager.instance.ResetProgress();
         SceneManager.LoadScene(1);
     }
 
