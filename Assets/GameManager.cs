@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,13 +7,15 @@ public class GameManager : MonoBehaviour
     public int activeRiddle = -1;
     public bool[] solvedRiddles = new bool[4];
 
+    private bool jobReadyToComplete = false;
+
     public void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadProgress();  
+            LoadProgress();
         }
         else
         {
@@ -21,13 +23,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetActiveRiddle(int riddleNumber) {
+    public void SetActiveRiddle(int riddleNumber)
+    {
         activeRiddle = riddleNumber;
     }
 
     public void SetRiddleSolved(int riddleNumber)
     {
         solvedRiddles[riddleNumber] = true;
+        jobReadyToComplete = false;  // reset after completion
         SaveProgress();
     }
 
@@ -51,7 +55,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadProgress()
     {
-        for (int i = 0; i < solvedRiddles.Length; i++) {
+        for (int i = 0; i < solvedRiddles.Length; i++)
+        {
             solvedRiddles[i] = PlayerPrefs.GetInt("puzzle" + i, 0) == 1;
         }
     }
@@ -59,13 +64,25 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Reset Progress")]
     public void ResetProgress()
     {
-        Debug.Log("Deltete...");
+        Debug.Log("Deleting saved progress...");
         PlayerPrefs.DeleteAll();
-        for (int i = 0; i < solvedRiddles.Length; i++) {
+        for (int i = 0; i < solvedRiddles.Length; i++)
+        {
             solvedRiddles[i] = false;
         }
         activeRiddle = -1;
-        Debug.Log("Delteted");
+        Debug.Log("Deleted");
         SaveProgress();
+    }
+
+    // ✅ New methods for validation
+    public void SetJobReadyToComplete(bool value)
+    {
+        jobReadyToComplete = value;
+    }
+
+    public bool IsJobReadyToComplete()
+    {
+        return jobReadyToComplete;
     }
 }

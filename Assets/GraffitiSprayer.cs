@@ -194,12 +194,8 @@ public class GraffitiSprayer : MonoBehaviour
         if (graffitiProgressBar != null)
             graffitiProgressBar.gameObject.SetActive(false);
 
-        GameManager.instance.SetRiddleSolved(GameManager.instance.activeRiddle);
-
-        if (GameManager.instance.AllRiddlesSolved())
-        {
-            SceneManager.LoadScene("Ending");
-        }
+        // ✅ Do NOT set the job as solved here anymore
+        // GameManager.instance.SetRiddleSolved(...) is now handled in MailboxTeleport.cs only
     }
 
     void FailSpray(string message)
@@ -262,7 +258,6 @@ public class GraffitiSprayer : MonoBehaviour
         }
     }
 
-    // Precise check: is sprayPoint inside a valid spray zone
     bool IsSprayPointInsideArea()
     {
         Collider2D[] colliders = Physics2D.OverlapPointAll(sprayPoint.position);
@@ -274,7 +269,6 @@ public class GraffitiSprayer : MonoBehaviour
         return false;
     }
 
-    // Trigger detection (still useful for debug, not used for accuracy now)
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("ENTERED: " + other.name + " | TAG: " + other.tag);

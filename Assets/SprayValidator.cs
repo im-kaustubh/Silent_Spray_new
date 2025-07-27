@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class SprayValidator : MonoBehaviour
@@ -49,6 +49,9 @@ public class SprayValidator : MonoBehaviour
         {
             PlaySound(correctSprayClip);
             ShowMonologue("Congrats! You did it");
+
+            // ✅ Mark the job ready to complete
+            GameManager.instance?.SetJobReadyToComplete(true);
         }
         else if (isInCorrectZone && sprayedName != correctName)
         {
