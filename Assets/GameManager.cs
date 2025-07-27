@@ -59,13 +59,11 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Reset Progress")]
     public void ResetProgress()
     {
-        Debug.Log("Deltete...");
         PlayerPrefs.DeleteAll();
         for (int i = 0; i < solvedRiddles.Length; i++) {
             solvedRiddles[i] = false;
         }
         activeRiddle = -1;
-        Debug.Log("Delteted");
         SaveProgress();
     }
 }
