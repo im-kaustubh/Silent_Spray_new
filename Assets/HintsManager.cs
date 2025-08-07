@@ -15,6 +15,7 @@ public class HintsManager : MonoBehaviour
     public class RiddleHints
     {
         public HintData[] hints;
+        [TextArea] public string riddleText;
     }
 
     public static HintsManager instance;
@@ -25,6 +26,10 @@ public class HintsManager : MonoBehaviour
     public AudioSource audioSource;
     public GameObject hintPanel;
     public Button closeButton;
+
+    public GameObject riddlePanel;
+    public TextMeshProUGUI riddleText;
+    public Button rClose;
 
     private int[] hintProgress;
 
@@ -43,18 +48,28 @@ public class HintsManager : MonoBehaviour
         }
     }
 
-    public void AssignUI(GameObject panel, TextMeshProUGUI subtitle, AudioSource audio, Button close)
+    public void AssignUI(GameObject panel, TextMeshProUGUI subtitle, AudioSource audio, Button close, GameObject rPanel, TextMeshProUGUI rText, Button rCloseBtn)
     {
         hintPanel = panel;
         subtitleText = subtitle;
         audioSource = audio;
         closeButton = close;
 
+        riddlePanel = rPanel;
+        riddleText = rText;
+        rClose = rCloseBtn;
+
         closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(CloseHintPanel);
 
+        rClose.onClick.RemoveAllListeners();
+        rClose.onClick.AddListener(CloseRiddlePanel);
+
         if (hintPanel != null)
             hintPanel.SetActive(false);
+
+        if (riddlePanel != null)
+            riddlePanel.SetActive(false);
 
         Debug.Log("UI set up done");
     }
@@ -108,5 +123,33 @@ public class HintsManager : MonoBehaviour
     {
         for (int i = 0; i < hintProgress.Length; i++)
             hintProgress[i] = 0;
+    }
+
+    public void ShowRiddle()
+    {
+        int riddleIndex = GameManager.instance.activeRiddle;
+
+        if (riddleIndex == -1)
+        {
+            Debug.Log("No Riddle selected");
+            return;
+        }
+
+        if(riddlePanel == null)
+        {
+            Debug.Log("No riddlePanell assigned");
+            return;
+        }
+
+        riddleText.text = allRiddleHints[riddleIndex].riddleText;
+        riddlePanel.SetActive(true);
+    }
+
+    public void CloseRiddlePanel()
+    {
+        if (riddlePanel != null)
+        {
+            riddlePanel.SetActive(false);
+        }
     }
 }

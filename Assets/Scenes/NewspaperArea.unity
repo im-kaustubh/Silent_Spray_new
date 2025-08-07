@@ -5889,6 +5889,11 @@ MonoBehaviour:
     - hintAudios: {fileID: 8300000, guid: a6e94e9f56af3144a9b0a9b4bca9fbd9, type: 3}
       hintText: ...a sentinel with button eyes and a heart of cotton...a teddy bear
         has button eyes and is also filled with cotton
+    riddleText: "Fixaiir xli vih xlex wmxw mr wmpirgi erh xli mvsr xlex jpmgoivw
+      fc rmklx, xlivi'w e aepp xlex'w jsvksxxir lsa xs wtieo. Mx riihw e ria jegi.
+      Rsx e aspj, rsx e fmvh \u2014 e wirxmrip amxl fyxxsr iciw erh e lievx sj gsxxsr.
+      Sri als wxecw, izir alir izivcxlmrk ipwi pieziw. Csy orsa xli tpegi.\n\r\nPS.
+      Remember to take 4 steps backwards \r\nYour old Friend Caesar\r"
   - hints:
     - hintAudios: {fileID: 8300000, guid: 5ef8d712777f36e4fa778ab0fa873439, type: 3}
       hintText: "The note says something about numbers and letters\u2026 what if
@@ -5904,6 +5909,18 @@ MonoBehaviour:
     - hintAudios: {fileID: 8300000, guid: e2216842be22697439469b79f1b253c0, type: 3}
       hintText: "A withered bloom, once red\u2026 roses are red\u2026 and they can
         bloom"
+    riddleText: "3 15 12 4 / 19 20 15 14 5 19 / 23 1 20 3 8 / 2 5 14 5 1 20 8 / 1
+      / 16 1 12 5 / 13 15 15 14 /\v19 9 12 5 14 20 / 19 5 14 20 9 14 5 12 19 / 9
+      14 / 18 5 19 20 12 5 19 19 / 7 18 15 21 14 4 /\v1 / 18 21 19 20 5 4 / 1 18
+      3 8 / 2 18 5 1 20 8 5 19 / 15 16 5 14 / 19 12 15 23 / 2 5 25 15 14 4 / 1 /
+      8 15 12 12 15 23 / 23 1 9 20 19 /\v14 15 20 / 17 21 9 20 5 / 5 1 18 20 8 /
+      14 15 20 / 17 21 9 20 5 / 18 5 19 20 /\v1 / 23 9 20 8 5 18 5 4 / 2 12 15 15
+      13 / 15 14 3 5 / 18 5 4 /\v3 12 9 14 7 19 / 20 15 / 20 8 5 / 19 15 9 12 /\v23
+      8 5 18 5 / 14 15 / 8 1 14 4 / 4 1 18 5 19 / 12 9 14 7 5 18 /\v20 8 5 25 / 2
+      21 18 9 5 4 / 19 15 13 5 20 8 9 14 7 / 20 8 5 18 5 /\v2 5 20 23 5 5 14 / 20
+      8 5 / 20 8 18 5 19 8 15 12 4 / 1 14 4 / 20 8 5 / 2 15 24 /\v2 21 20 / 14 15
+      20 / 1 12 12 / 15 6 / 9 20 / 19 20 1 25 5 4\n\r\nSometimes numbers say more
+      than letters\r"
   - hints:
     - hintAudios: {fileID: 8300000, guid: a3092479cb119254bbad1702005627e3, type: 3}
       hintText: "The letters seem off\u2026 as if they\u2019re looking back at me
@@ -5920,6 +5937,13 @@ MonoBehaviour:
     - hintAudios: {fileID: 8300000, guid: b293671ae373d38418fc1e256bb3cf89, type: 3}
       hintText: "Above the helm, a silver curve\u2026 and small sparks that don\u2019t
         flicker? Could that be a moon surrounded by stars?"
+    riddleText: "Dsvm wfhp dzikh gsv hvz rm hgroovvh,\vtl dsviv gsv hzo gvoovh zmw
+      ilkvh dsrksvi orpv lwy gfl gmfvtvh.\vGsviv blf\u2019o urmw z evhhov zkitg uli
+      nsv ivhg,\vrgh uli mgskv wrglm hlnvgrmtz zolfhg snfnm,\vszri ulldrt yzxv, vbvh
+      urcwv lm gsv wvvc yvold.\r\nZylyv rgv svon, z hroiev xfiiv ivhgh,\vxizwovw
+      yb uzrmg hzkilg gszg wl mlg urxpvi.\vGsvb dzxsg, hrovmg zmw hvwzdb.\n\r\nIf
+      you wish to see truly, gaze into the mirror and let the world reflect the other
+      way.\r"
   - hints:
     - hintAudios: {fileID: 8300000, guid: 803796ef4ebfb004c8b7daa0b786bb24, type: 3}
       hintText: It seems that certain letters are missing. 2 vowels. if i find out
@@ -5936,10 +5960,18 @@ MonoBehaviour:
     - hintAudios: {fileID: 8300000, guid: ed83bb34c4d366a4c92d6f095ac03936, type: 3}
       hintText: "The blade in flight\u2026 not a weapon thrown, but one that flies
         on its own. Could it be something with wings\u2026 a bird ... and a knife?"
+    riddleText: "Wh_r_ ir_n v_ins l_ad t_ _blivi_nand f_ _tsteps _cho t_ the b_at
+      _f past j_urn_ys. The _ld ir_n h_art rests b_tw_ _n time and burden.                                           
+      A gaz_ that n_v_r sl_ _ps sil_ntly guards th_ baggag_ _f past shad_ws. \r\n_nly
+      th_se wh_ r_c_gniz_ the blad_ in flight will paint th_ path, \r\nwh_r_ rust
+      and time kiss.\r"
   subtitleText: {fileID: 0}
   audioSource: {fileID: 0}
   hintPanel: {fileID: 0}
   closeButton: {fileID: 0}
+  riddlePanel: {fileID: 0}
+  riddleText: {fileID: 0}
+  rClose: {fileID: 0}
 --- !u!4 &1945274862
 Transform:
   m_ObjectHideFlags: 0
